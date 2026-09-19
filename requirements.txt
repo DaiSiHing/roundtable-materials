@@ -1,0 +1,6 @@
+# Everything the engines import beyond the standard library.
+# Re-run check of 2026-09-19 used Python 3.12.10 with numpy 2.5.0, scipy 1.18.1,
+# matplotlib 3.11.0; nothing here is pinned because nothing needs to be.
+numpy
+scipy        # the-uneven-month/coupled_tail_mc.py only
+matplotlib   # the-uneven-month figures only

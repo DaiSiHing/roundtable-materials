@@ -10,7 +10,9 @@ headline number in a study traces to a file here.
 
 The website is the source of record. Each folder here mirrors, byte for byte, the
 `materials/` folder the site serves for that study, and carries a
-`MANIFEST.sha256` so you can check. A published study is a moment in time: its
+`MANIFEST.sha256` so you can check. Each folder's README says how to re-run its
+engines, and `verify_rerun.py` compares your re-run with the published results.
+A published study is a moment in time: its
 files are not quietly revised. Anything learned later is appended to the study
 page as a dated update.
 
