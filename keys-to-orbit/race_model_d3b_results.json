@@ -1,0 +1,324 @@
+{
+ "artifact": "race_model_d3b_v1",
+ "seat": "Game Theory & Mechanism Design",
+ "seed": 26716,
+ "depends_on": {
+  "qb_engine": "kessler_qb_engine_v1 seed 20260716 (v1.2 results JSON; criticality layer verified identical to D5-accepted)",
+  "M_source": "qb_engine_raw_sample.csv col rho_star_465_495 (2000 draws, resampled)",
+  "anchors": {
+   "N0": 10736.0,
+   "lam0_per_yr": 0.2,
+   "mu0_per_satyr": 0.000279433681
+  }
+ },
+ "language_conditions": "F13/F15 bind; gradient discipline binds: the externality is unpriced, therefore whatever entry occurs is over-entry - never 'a million satellites will fly'; no dates, distance-to-boundary only",
+ "payoff_space_map": {
+  "region_shares_cournot": {
+   "paper": 0.69045,
+   "race_subcritical": 0.16993,
+   "trap_critical": 0.13962
+  },
+  "region_shares_open_access": {
+   "paper": 0.69045,
+   "race_subcritical": 0.15823,
+   "trap_critical": 0.15132
+  },
+  "note_regions": "shares of ASSUMED payoff-space draws (parameter belief over payoff assumptions) - NOT probabilities of the future; the map is the deliverable",
+  "overentry_ratio_openaccess_Qoa_over_Qstar_p05_p50_p95": [
+   1.00002589,
+   1.00065978,
+   1.01991071
+  ],
+  "overentry_ratio_cournot_Qeq_over_Qstar_p05_p50_p95": [
+   0.666973355,
+   0.85777537,
+   0.911114055
+  ],
+  "share_cournot_UNDERproduces_vs_planner": 0.997188924,
+  "share_Qstar_zero_but_entry": 6e-05,
+  "note_welfare_standard": "planner = FULL WELFARE (consumer surplus included). Invariant: open access strictly over-enters whenever the externality is positive (a>a*, b_oa<b*). Cournot is MEASURED, not assumed: market power can under-produce vs the optimum - the trap gradient is an open-access claim, and it sharpens as n grows",
+  "theta_paper_usd_per_satyr_p05_p50_p95": [
+   36758.4713,
+   174371.109,
+   841366.113
+  ],
+  "theta_crit_usd_per_satyr_p05_p50_p95_reachable": [
+   48643.5461,
+   296149.883,
+   2265872.7
+  ],
+  "share_threshold_unreachable_by_demand": 0.44671,
+  "thin_middle_theta_crit_over_theta_paper_p05_p50_p95": [
+   1.01923532,
+   1.3454434,
+   8.00537342
+  ],
+  "share_thin_middle_below_2x": 0.741202624,
+  "share_thin_middle_below_5x": 0.916734443,
+  "private_collision_cost_at_threshold_usd_per_satyr_p05_p50_p95": [
+   98.623857,
+   768.151736,
+   6159.53529
+  ],
+  "share_entering_draws_where_cthr_exceeds_10pct_theta": 0.00407042481,
+  "physics_self_enforcement_share_of_nohaz_trap_draws": 0.00633406875,
+  "boundary_fee_usd_per_satyr_trap_draws_p05_p50_p95": [
+   13141.2693,
+   339406.867,
+   1857546.06
+  ],
+  "boundary_fee_share_below_235k": 0.412834837,
+  "boundary_fee_share_above_235k": 0.587165163,
+  "note_boundary_fee": "fee required to keep equilibrium stock at/below the threshold in draws that are trap-critical unpriced; compare Rao anchors - this, not the static Pigouvian f*, is the fee that moves the boundary"
+ },
+ "milestone_arithmetic": {
+  "filed_totals_sats": {
+   "spacex_odc": 1000000,
+   "blue_origin_sunrise": 51600,
+   "orbital_compute": 100000,
+   "spacex_gen3": 100000
+  },
+  "sum_filed": 1251600.0,
+  "itu_res35_M1_10pct_stock": 125160.0,
+  "fcc_25164_50pct_stock": 625800.0,
+  "multiplier_if_M1_honored": 12.6579732,
+  "multiplier_if_fcc50_honored": 59.2898659,
+  "share_engine_draws_threshold_below_M1_multiplier": 0.737,
+  "share_engine_draws_threshold_below_fcc50_multiplier": 0.9915,
+  "share_engine_draws_already_supercritical_maneuvered": 0.013,
+  "conditions": "ILLUSTRATIVE CEILING, three loud IFs: all filings granted; milestones honored; stock concentrated at trigger-band-like shells. Filings span 150-2000 km (Gen3 323-477 km straddles bands 0/1, where drag is stronger). Column-level arithmetic, not a band forecast; distance-to-threshold only, no dates. Threshold multiplier is maneuvered-regime, f_imp-conditional, parameter belief (F15)."
+ },
+ "mechanism_tests": {
+  "E1_fees": {
+   "fee_0k": {
+    "cournot": {
+     "paper": 0.69045,
+     "race_subcritical": 0.16993,
+     "trap_critical": 0.13962
+    },
+    "open_access": {
+     "paper": 0.69045,
+     "race_subcritical": 0.15823,
+     "trap_critical": 0.15132
+    },
+    "median_Qeq_entering": 49397.1454
+   },
+   "fee_15k": {
+    "cournot": {
+     "paper": 0.7038,
+     "race_subcritical": 0.16432,
+     "trap_critical": 0.13188
+    },
+    "open_access": {
+     "paper": 0.7038,
+     "race_subcritical": 0.15233,
+     "trap_critical": 0.14387
+    },
+    "median_Qeq_entering": 48390.0094
+   },
+   "fee_50k": {
+    "cournot": {
+     "paper": 0.7275,
+     "race_subcritical": 0.15302,
+     "trap_critical": 0.11948
+    },
+    "open_access": {
+     "paper": 0.7275,
+     "race_subcritical": 0.14242,
+     "trap_critical": 0.13008
+    },
+    "median_Qeq_entering": 46522.9846
+   },
+   "fee_100k": {
+    "cournot": {
+     "paper": 0.75167,
+     "race_subcritical": 0.14182,
+     "trap_critical": 0.10651
+    },
+    "open_access": {
+     "paper": 0.75167,
+     "race_subcritical": 0.13215,
+     "trap_critical": 0.11618
+    },
+    "median_Qeq_entering": 44359.2149
+   },
+   "fee_235k": {
+    "cournot": {
+     "paper": 0.79613,
+     "race_subcritical": 0.12189,
+     "trap_critical": 0.08198
+    },
+    "open_access": {
+     "paper": 0.79613,
+     "race_subcritical": 0.1136,
+     "trap_critical": 0.09027
+    },
+    "median_Qeq_entering": 39666.1108
+   },
+   "pigouvian_fstar_cournot_p05_p50_p95_entering": [
+    -598019.678,
+    -87218.7669,
+    -2625.43695
+   ],
+   "pigouvian_fstar_open_access_p05_p50_p95_entering": [
+    15.6866783,
+    230.573703,
+    4105.63144
+   ],
+   "share_fstar_cournot_negative": 0.996995639,
+   "rao_bracket_check_open_access": {
+    "share_fstar_below_15k": 0.995315781,
+    "share_fstar_in_15k_235k": 0.00468421903,
+    "share_fstar_above_235k": 0.0,
+    "note": "our f* is STATIC (current-stock externality incl. threshold-crossing NOT priced); Rao et al. price the DYNAMIC accumulation path - our f* is a floor on theirs, not an estimate of it; both cited, neither re-derived"
+   }
+  },
+  "E5_deadline_vs_holding": {
+   "sigma_0p6": {
+    "deadline": {
+     "P_hardware": 0.30956,
+     "stranded_share_of_deployed": 0.120657298,
+     "mean_pv_margin_deployed": 7626170.24
+    },
+    "holding_1k": {
+     "P_hardware": 0.3034998,
+     "P_deploy_t1": 0.25989,
+     "P_hold_paper": 0.18387,
+     "P_exit_t1": 0.55624,
+     "stranded_share_of_deployed": 0.0459440114,
+     "hardware_ratio_deadline_over_holding": 1.01996772
+    },
+    "holding_3k": {
+     "P_hardware": 0.303488622,
+     "P_deploy_t1": 0.26129,
+     "P_hold_paper": 0.15834,
+     "P_exit_t1": 0.58037,
+     "stranded_share_of_deployed": 0.0476288569,
+     "hardware_ratio_deadline_over_holding": 1.02000529
+    },
+    "holding_10k": {
+     "P_hardware": 0.303559144,
+     "P_deploy_t1": 0.2663,
+     "P_hold_paper": 0.12196,
+     "P_exit_t1": 0.61174,
+     "stranded_share_of_deployed": 0.0536396769,
+     "hardware_ratio_deadline_over_holding": 1.01976833
+    },
+    "holding_30k": {
+     "P_hardware": 0.304616798,
+     "P_deploy_t1": 0.2785,
+     "P_hold_paper": 0.07802,
+     "P_exit_t1": 0.64348,
+     "stranded_share_of_deployed": 0.0711452233,
+     "hardware_ratio_deadline_over_holding": 1.01622761
+    }
+   },
+   "sigma_0p3": {
+    "deadline": {
+     "P_hardware": 0.30956,
+     "stranded_share_of_deployed": 0.0504252429,
+     "mean_pv_margin_deployed": 7626170.24
+    },
+    "holding_3k": {
+     "P_hardware": 0.309628034,
+     "P_deploy_t1": 0.28653,
+     "P_hold_paper": 0.07241,
+     "P_exit_t1": 0.64106,
+     "stranded_share_of_deployed": 0.0192165233,
+     "hardware_ratio_deadline_over_holding": 0.999780271
+    }
+   },
+   "sigma_1p0": {
+    "deadline": {
+     "P_hardware": 0.30956,
+     "stranded_share_of_deployed": 0.237968762,
+     "mean_pv_margin_deployed": 7626170.24
+    },
+    "holding_3k": {
+     "P_hardware": 0.286511555,
+     "P_deploy_t1": 0.22954,
+     "P_hold_paper": 0.26831,
+     "P_exit_t1": 0.50215,
+     "stranded_share_of_deployed": 0.103808178,
+     "hardware_ratio_deadline_over_holding": 1.08044508
+    }
+   },
+   "spec": {
+    "TPV_years": 10.0,
+    "hold_period_years": 3.0,
+    "discount": 0.86,
+    "bond_forfeit_usd_per_sat": 100.0,
+    "sigma_theta_default": 0.6,
+    "note": "partial-equilibrium option module (rival quantities not fed back - SIMPLIFICATION, flagged); 'stranded' = deployed capacity whose t2 value is negative: in-orbit hardware in low-value states, the physical-externality carrier"
+   }
+  },
+  "E2_disposal_bond": {
+   "dispose_share_by_bond_level": {
+    "fcc_cap_scale_50usd": 0.0,
+    "half_d": 0.0,
+    "at_d": 1.0,
+    "twice_d": 1.0
+   },
+   "disposal_cost_d_p05_p50_p95": [
+    12114.352,
+    71025.5021,
+    411073.852
+   ],
+   "design_conditions": "dispose iff d <= B (weak tie disposes): the two D3 conditions quantified - (a) B >= d or forfeit-and-abandon dominates; (b) bankruptcy-remote escrow assumed here (a bond inside the estate is a creditor claim, not a mechanism)",
+   "trap_share_shift_from_internalizing_d": {
+    "cournot_before": 0.13962,
+    "cournot_after": 0.13379
+   }
+  }
+ },
+ "coverage_matrix": {
+  "fee_235k": {
+   "filing_volume": "no effect modeled (fees bill deployed sats; filing stays ~free)",
+   "trap_share_cournot": [
+    0.13962,
+    0.08198
+   ],
+   "disposal_outcome": "no effect (fee does not touch end-of-life choice)"
+  },
+  "holding_price_3k": {
+   "filing_volume_P_exit_t1": 0.58037,
+   "hardware_ratio_deadline_over_holding": 1.02000529,
+   "disposal_outcome": "no effect"
+  },
+  "disposal_bond_at_d": {
+   "filing_volume": "no effect",
+   "trap_share_shift": {
+    "cournot_before": 0.13962,
+    "cournot_after": 0.13379
+   },
+   "disposal_outcome_dispose_share": [
+    0.0,
+    1.0
+   ]
+  },
+  "sentence_under_test": "'no single instrument unpicks both games' - the matrix bears it out: fee moves the deployment boundary only; holding price moves the filing->hardware conversion only; bond moves the disposal outcome (totally, at B>=d) and the deployment boundary only marginally"
+ },
+ "cross_seed": {
+  "seed_pair": [
+   26716,
+   26717
+  ],
+  "max_abs_region_share_dev": 0.00135,
+  "fstar_cournot_median_rel_dev": 0.00562473
+ },
+ "robustness_ledger": {
+  "invariant_under_payoff_monotonicity": [
+   "file-big weak dominance at ~zero filing cost (analytic; not simulated here)",
+   "Qeq >= Qstar direction (over-entry) whenever the externality term is positive and market power does not dominate; the exceptions are measured (share_fstar_negative)",
+   "dispose iff B >= d (Module C decision rule is analytic)",
+   "deadline deploys weakly more marginal-value states than holding for any h > 0 (option-value argument)"
+  ],
+  "magnitude_dependent_ASSUMED": [
+   "all region shares and boundary locations (theta/k/L/Qd/n/u sweeps are assumed)",
+   "fstar distributions and the Rao bracket shares",
+   "stranded-capacity shares and hardware ratios (sigma_theta, TPV, DT, delta assumed)",
+   "private-collision-cost-at-threshold magnitudes (lam0 knob-median, f_imp-conditional)",
+   "milestone arithmetic conditions as stated"
+  ]
+ }
+}

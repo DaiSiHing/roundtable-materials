@@ -1,0 +1,98 @@
+{
+  "artifact": "d15d_staged_winddown_resize",
+  "author_seat": "Economics & Statistics Referee",
+  "round": "D15d (D12-addendum A1 re-sizing, pre-launch)",
+  "seed": 20260720,
+  "ndraw": 400000,
+  "disposal_cost_d_p5_p50_p95_mean": {
+    "p5": 12150.104383706825,
+    "p50": 70720.68216877288,
+    "p95": 411250.690671591,
+    "mean": 125286.1417282544
+  },
+  "R1_principal_TAPER_INVARIANT": {
+    "current_census_starlink_active": {
+      "p5": 130443520.66347647,
+      "p50": 759257243.7639456,
+      "p95": 4415187415.0502,
+      "mean": 1345072017.5945392,
+      "N": 10736,
+      "note": "unchanged from D15 R1 - terminal disposal cost does not depend on taper length"
+    },
+    "trigger_band_density_effective": {
+      "p5": 90907080.99889445,
+      "p50": 529132143.9867587,
+      "p95": 3076977667.6048436,
+      "mean": 937390912.4107994,
+      "N": 7482,
+      "note": "unchanged from D15 R1 - terminal disposal cost does not depend on taper length"
+    },
+    "filed_queue_ITU_M1_10pct": {
+      "p5": 1520707064.664746,
+      "p50": 8851400580.243614,
+      "p95": 51472136444.45633,
+      "mean": 15680813498.70832,
+      "N": 125160,
+      "note": "unchanged from D15 R1 - terminal disposal cost does not depend on taper length"
+    },
+    "filed_queue_FCC_50pct": {
+      "p5": 7603535323.32373,
+      "p50": 44257002901.21806,
+      "p95": 257360682222.28165,
+      "mean": 78404067493.5416,
+      "N": 625800,
+      "note": "unchanged from D15 R1 - terminal disposal cost does not depend on taper length"
+    },
+    "filed_queue_total_100pct": {
+      "p5": 15207070646.64746,
+      "p50": 88514005802.43613,
+      "p95": 514721364444.5633,
+      "mean": 156808134987.0832,
+      "N": 1251600,
+      "note": "unchanged from D15 R1 - terminal disposal cost does not depend on taper length"
+    }
+  },
+  "R3_opex_exposure_compressed_vs_staged": {
+    "current_census_starlink_active": {
+      "N": 10736,
+      "compressed_5yr_fleet_sat_years": 53680.0,
+      "staged_15yr_fleet_sat_years": 161040.0,
+      "ratio_staged_over_compressed": 3.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced)"
+    },
+    "trigger_band_density_effective": {
+      "N": 7482,
+      "compressed_5yr_fleet_sat_years": 37410.0,
+      "staged_15yr_fleet_sat_years": 112230.0,
+      "ratio_staged_over_compressed": 3.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced)"
+    },
+    "filed_queue_ITU_M1_10pct": {
+      "N": 125160,
+      "compressed_5yr_fleet_sat_years": 625800.0,
+      "staged_15yr_fleet_sat_years": 1877400.0,
+      "ratio_staged_over_compressed": 3.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced)"
+    },
+    "filed_queue_FCC_50pct": {
+      "N": 625800,
+      "compressed_5yr_fleet_sat_years": 3129000.0,
+      "staged_15yr_fleet_sat_years": 9387000.0,
+      "ratio_staged_over_compressed": 3.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced)"
+    },
+    "filed_queue_total_100pct": {
+      "N": 1251600,
+      "compressed_5yr_fleet_sat_years": 6258000.0,
+      "staged_15yr_fleet_sat_years": 18774000.0,
+      "ratio_staged_over_compressed": 3.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced)"
+    }
+  },
+  "D13_lever_context": {
+    "peak_reentry_ratio_staged_over_compressed_p50": 0.35584373713420364,
+    "cumulative_ratio_p50_horizon_truncated": 0.827530428075464,
+    "note": "staged cuts PEAK intact-reentry to ~1/3 while retaining the debris benefit; cumulative<1 is a 26-yr horizon artifact, not a lost-fleet effect - in the limit both dispose N (staging moves timing, not total)."
+  },
+  "ruling": "Staging the wind-down 5->15 yr (the D6-reconciled design point) leaves R1 (terminal-disposal principal) UNCHANGED and TRIPLES R3 (f2 through-window opex exposure): N*5 -> N*15 sat-yr. R1 is a per-object terminal cost; R3 is a per-object-year flow cost - only the flow cost is taper-sensitive. The trust sized against the staged wind-down = R1 principal (invariant floor) + R3 opex reserve (tripled, needs-data rate). D14's $0.76B floor and the covered-vs-aspirational split are unaffected. Second-order (flagged, not priced): a 15-yr reserve is drawn down over 15 yr not 5, so its present value/carry differs from a naive 3x of an annual rate - immaterial while the per-sat-yr rate is needs-data."
+}

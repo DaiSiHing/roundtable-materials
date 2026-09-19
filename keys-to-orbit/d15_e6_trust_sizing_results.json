@@ -1,0 +1,158 @@
+{
+  "artifact": "d15_e6_trust_sizing",
+  "author_seat": "Economics & Statistics Referee",
+  "round": "D15 (E6 pricing/incidence, pre-launch final referee round)",
+  "seed": 20260720,
+  "ndraw": 400000,
+  "disposal_cost_d_logU_10k_500k": {
+    "reimplemented_p5_p50_p95": {
+      "p5": 12150.104383706825,
+      "p50": 70720.68216877288,
+      "p95": 411250.690671591
+    },
+    "reimplemented_mean": 125286.1417282544,
+    "analytic_p5_p50_p95_mean": {
+      "p5": 12160.417906586574,
+      "p50": 70710.67811865476,
+      "p95": 411170.0797134445,
+      "mean": 125254.88713131245
+    },
+    "paper_anchor_7_1": {
+      "p50": 71000,
+      "p5": 12000,
+      "p95": 411000
+    },
+    "note": "geometric mean (median) reproduces \u00a77.1 $71k; arithmetic mean $125k is the higher moment iid-summing would wrongly re-center on."
+  },
+  "R1_fleet_trust_principal_common_mode": {
+    "current_census_starlink_active": {
+      "p5": 130443520.66347647,
+      "p50": 759257243.7639456,
+      "p95": 4415187415.0502,
+      "mean": 1345072017.5945392,
+      "N": 10736
+    },
+    "trigger_band_density_effective": {
+      "p5": 90907080.99889445,
+      "p50": 529132143.9867587,
+      "p95": 3076977667.6048436,
+      "mean": 937390912.4107994,
+      "N": 7482
+    },
+    "burden_shift_nonmaneuverable": {
+      "p5": 25673170.56277252,
+      "p50": 149432801.42261708,
+      "p95": 868972709.3890717,
+      "mean": 264729617.47180155,
+      "N": 2113
+    },
+    "filed_queue_ITU_M1_10pct": {
+      "p5": 1520707064.664746,
+      "p50": 8851400580.243614,
+      "p95": 51472136444.45633,
+      "mean": 15680813498.70832,
+      "N": 125160
+    },
+    "filed_queue_FCC_50pct": {
+      "p5": 7603535323.32373,
+      "p50": 44257002901.21806,
+      "p95": 257360682222.28165,
+      "mean": 78404067493.5416,
+      "N": 625800
+    },
+    "filed_queue_total_100pct": {
+      "p5": 15207070646.64746,
+      "p50": 88514005802.43613,
+      "p95": 514721364444.5633,
+      "mean": 156808134987.0832,
+      "N": 1251600
+    }
+  },
+  "R1_iid_sum_contrast_WRONG_for_homogeneous_fleet": {
+    "current_census_starlink_active": {
+      "N": 10736,
+      "mean": 1345072017.5945392,
+      "p5_approx": 1323337889.4056857,
+      "p95_approx": 1366806145.7833927,
+      "coefficient_of_variation": 0.009822697824532926
+    },
+    "trigger_band_density_effective": {
+      "N": 7482,
+      "mean": 937390912.4107994,
+      "p5_approx": 919247046.6213721,
+      "p95_approx": 955534778.2002267,
+      "coefficient_of_variation": 0.0117663884949576
+    },
+    "burden_shift_nonmaneuverable": {
+      "N": 2113,
+      "mean": 264729617.47180155,
+      "p5_approx": 255087537.67503777,
+      "p95_approx": 274371697.26856536,
+      "coefficient_of_variation": 0.02214125771396597
+    },
+    "filed_queue_ITU_M1_10pct": {
+      "N": 125160,
+      "mean": 15680813498.70832,
+      "p5_approx": 15606604982.15094,
+      "p95_approx": 15755022015.265701,
+      "coefficient_of_variation": 0.0028768635135523204
+    },
+    "filed_queue_FCC_50pct": {
+      "N": 625800,
+      "mean": 78404067493.5416,
+      "p5_approx": 78238132206.00987,
+      "p95_approx": 78570002781.07332,
+      "coefficient_of_variation": 0.001286572475658375
+    },
+    "filed_queue_total_100pct": {
+      "N": 1251600,
+      "mean": 156808134987.0832,
+      "p5_approx": 156573467052.97955,
+      "p95_approx": 157042802921.18683,
+      "coefficient_of_variation": 0.0009097441220260014
+    }
+  },
+  "R3_f2_bridge_opex_exposure": {
+    "current_census_starlink_active": {
+      "N": 10736,
+      "winddown_fleet_satellite_years": 53680.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced in this record)",
+      "opex_total_usd": "= 53680 sat-yr * (unsourced $/sat-yr)"
+    },
+    "trigger_band_density_effective": {
+      "N": 7482,
+      "winddown_fleet_satellite_years": 37410.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced in this record)",
+      "opex_total_usd": "= 37410 sat-yr * (unsourced $/sat-yr)"
+    },
+    "burden_shift_nonmaneuverable": {
+      "N": 2113,
+      "winddown_fleet_satellite_years": 10565.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced in this record)",
+      "opex_total_usd": "= 10565 sat-yr * (unsourced $/sat-yr)"
+    },
+    "filed_queue_ITU_M1_10pct": {
+      "N": 125160,
+      "winddown_fleet_satellite_years": 625800.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced in this record)",
+      "opex_total_usd": "= 625800 sat-yr * (unsourced $/sat-yr)"
+    },
+    "filed_queue_FCC_50pct": {
+      "N": 625800,
+      "winddown_fleet_satellite_years": 3129000.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced in this record)",
+      "opex_total_usd": "= 3129000 sat-yr * (unsourced $/sat-yr)"
+    },
+    "filed_queue_total_100pct": {
+      "N": 1251600,
+      "winddown_fleet_satellite_years": 6258000.0,
+      "opex_per_sat_yr_usd": "NEEDS-DATA (unsourced in this record)",
+      "opex_total_usd": "= 6258000 sat-yr * (unsourced $/sat-yr)"
+    }
+  },
+  "R3_ruling": "Window duration is a HARD-CODED 5-yr e-fold (kessler_qb_engine.py L152-156), not a drawn distribution; exposure = N*5 sat-yr is exact. Per-sat-yr station-keeping opex is UNSOURCED -> needs-data (matches \u00a77.1 pass-through discipline). Direction: this is the genuinely-new cost E6 carries beyond the terminal disposal bond (R1); the trust must fund it too (D12 Component 1), so R1 alone UNDER-sizes the trust.",
+  "reconciliation": {
+    "vs_D14_floor": "D14's $0.76B floor = 10,736*$71k = R1 census p50 ($759M). D14's dispersion [$0.13B,$4.4B] = R1 census [p5,p95] ($131M,$4.41B). EXACT agreement \u2014 same object, same common-mode reading. Both tagged FLOOR / capability-intact orderly disposal.",
+    "vs_D13_partition": "D13 gives failure STATES + the ~84% avoidance-effectiveness criticality threshold, NOT a probability of landing covered-vs-residual (structural scenarios, no frequencies). So R3 opex is priceable PER UNIT of covered wind-down but the covered FRACTION is not a number this record contains. R3 opex is what keeps the fleet ABOVE D13's ~84% threshold during descent \u2014 i.e. buys the 'self-limiting wind-down' rather than the 'zombie'."
+  }
+}

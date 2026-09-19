@@ -1,0 +1,33 @@
+{
+  "epoch": "2026-07-15 catalog (Space-Track pull by Editor)",
+  "n_objects": 32010,
+  "class_counts": {
+    "sat": 19639,
+    "rb": 2191,
+    "deb": 10180
+  },
+  "starlink_count": 10742,
+  "oneweb_count": 654,
+  "qianfan_like_count": 238,
+  "payload_peak": {
+    "alt_km": 490,
+    "n_km3": 2.325496786834103e-06
+  },
+  "starlink_peak": {
+    "alt_km": 490,
+    "n_km3": 2.304385849947524e-06
+  },
+  "debris_peak": {
+    "alt_km": 801,
+    "n_km3": 4.049760189000555e-08
+  },
+  "band_avg_sat_540_570": 6.412771188769327e-08,
+  "band_avg_sat_465_495": 4.4464686544602967e-07,
+  "crash_clock_10_5_10_days": 0.7135498934684702,
+  "P_24h": 0.7537587902525238,
+  "method": "HoC v3: 1-km shells, orbit-fraction weighting, Eq.7 with 1/2 same-pop factor",
+  "grade": "SEAT-VERIFIED from primary catalog (D2-R1b: independent parse, classification variant-robust, weighting, Clock chain reproduced; d2r1b_catalog_verification.json)",
+  "starlink_over_debris_peak_ratio_1km_bins_ANNOTATED": 56.901785350312956,
+  "_ratio_note": "1-km bin-peak ratio; discretization-dependent (denominator ~26 effective objects). CARRIED study number: 11.1x at 30-km matched-scale windows [10.1, 11.4] (referee F12). Never quote the bin-peak unannotated.",
+  "starlink_count_note": "10,742 STARLINK-named objects incl. 2 debris (STARLINK-34343 DEB x2); payload count 10,740 (referee F9)"
+}

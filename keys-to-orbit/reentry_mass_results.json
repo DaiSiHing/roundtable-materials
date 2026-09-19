@@ -1,0 +1,101 @@
+{
+ "artifact": "kessler_reentry_mass_v1",
+ "seed": 20260717,
+ "n_draws": 100000,
+ "design_life_yr_ASSUMED": 5.0,
+ "natural_background_t_yr": {
+  "central_duprat2021": 15000.0,
+  "method_range": [
+   2000.0,
+   110000.0
+  ],
+  "note": "background carried as anchor+range, NOT drawn \u2014 its distribution shape is unknown and would be invented"
+ },
+ "flux_t_yr": {
+  "starlink_current": [
+   1766.12554,
+   2199.02024,
+   2635.56803
+  ],
+  "all_active_current": [
+   978.763751,
+   2437.43616,
+   3892.34742
+  ],
+  "itu_m1_increment": [
+   8448.47111,
+   28154.9809,
+   47902.8346
+  ],
+  "fcc_50pct_increment": [
+   42138.5307,
+   140982.864,
+   239775.318
+  ]
+ },
+ "ratio_to_central_background": {
+  "starlink_current": [
+   0.117741703,
+   0.146601349,
+   0.175704535
+  ],
+  "all_active_current": [
+   0.0652509167,
+   0.162495744,
+   0.259489828
+  ],
+  "itu_m1_increment": [
+   0.563231407,
+   1.87699872,
+   3.1935223
+  ],
+  "fcc_50pct_increment": [
+   2.80923538,
+   9.39885757,
+   15.9850212
+  ]
+ },
+ "conditions": "milestone rows carry THREE LOUD IFs (granted / honored / trigger-band-like shells); bracket never a date; unit-mass is the dominant ASSUMED sensitivity (SS8 analog of f_imp)",
+ "cross_seed": {
+  "seed_pair": [
+   20260717,
+   20260718
+  ],
+  "itu_m1_p50_rel_dev": 0.0031293033
+ },
+ "d6_memo_bracket_check": {
+  "starlink_current": {
+   "memo_endpoints_t_yr": [
+    1720,
+    2680
+   ],
+   "mc_support_p0_p100": [
+    1717.76636,
+    2683.99314
+   ],
+   "endpoints_match_to_rounding": true
+  },
+  "all_active_current": {
+   "memo_endpoints_t_yr": [
+    810,
+    4060
+   ],
+   "mc_support_p0_p100": [
+    811.736415,
+    4058.4848
+   ],
+   "endpoints_match_to_rounding": true
+  },
+  "itu_m1_increment": {
+   "memo_endpoints_t_yr": [
+    6260,
+    50060
+   ],
+   "mc_support_p0_p100": [
+    6258.08671,
+    50063.8083
+   ],
+   "endpoints_match_to_rounding": true
+  }
+ }
+}

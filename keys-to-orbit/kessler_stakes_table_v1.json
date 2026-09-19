@@ -1,0 +1,114 @@
+{
+ "artifact": "kessler_stakes_table_v1",
+ "built": "2026-07-16",
+ "source": "Space-track.txt full pull 15 Jul 2026 (referee-parse-verified file); altitude = a-Re from line-2 mean motion (near-circular convention, method stated)",
+ "total_objects_parsed": 32010,
+ "expected_total": 32010,
+ "rows": [
+  {
+   "band_km": "150-380",
+   "label": "below the stations",
+   "tracked_objects": 1269,
+   "debris_and_rb": 38,
+   "categories": {
+    "starlink": 1019,
+    "weather_climate_ops": 1,
+    "earth_science_observation": 18
+   }
+  },
+  {
+   "band_km": "380-430",
+   "label": "the crewed band \u2014 where people live",
+   "tracked_objects": 424,
+   "debris_and_rb": 42,
+   "categories": {
+    "stations_and_crew_vehicles": 9,
+    "starlink": 164,
+    "weather_climate_ops": 5,
+    "earth_science_observation": 22
+   }
+  },
+  {
+   "band_km": "430-465",
+   "label": "between crews and the corridor",
+   "tracked_objects": 2352,
+   "debris_and_rb": 64,
+   "categories": {
+    "starlink": 1942,
+    "weather_climate_ops": 7,
+    "earth_science_observation": 35
+   }
+  },
+  {
+   "band_km": "465-495",
+   "label": "the internet corridor (trigger band)",
+   "tracked_objects": 6170,
+   "debris_and_rb": 63,
+   "categories": {
+    "starlink": 5698,
+    "weather_climate_ops": 10,
+    "earth_science_observation": 29
+   }
+  },
+  {
+   "band_km": "495-570",
+   "label": "the emptying band (the migration\u2019s origin)",
+   "tracked_objects": 2437,
+   "debris_and_rb": 241,
+   "categories": {
+    "starlink": 1220,
+    "oneweb": 1,
+    "weather_climate_ops": 29,
+    "earth_science_observation": 40
+   }
+  },
+  {
+   "band_km": "570-700",
+   "label": "upper transition",
+   "tracked_objects": 3084,
+   "debris_and_rb": 1290,
+   "categories": {
+    "starlink": 698,
+    "oneweb": 1,
+    "weather_climate_ops": 325,
+    "earth_science_observation": 14
+   }
+  },
+  {
+   "band_km": "700-1000",
+   "label": "the ratchet band \u2014 where Earth-watching lives",
+   "tracked_objects": 7155,
+   "debris_and_rb": 5672,
+   "categories": {
+    "oneweb": 2,
+    "qianfan_g60": 96,
+    "weather_climate_ops": 2022,
+    "earth_science_observation": 12
+   }
+  },
+  {
+   "band_km": "1000-2000",
+   "label": "high LEO",
+   "tracked_objects": 4858,
+   "debris_and_rb": 2712,
+   "categories": {
+    "oneweb": 650,
+    "qianfan_g60": 142,
+    "weather_climate_ops": 164,
+    "earth_science_observation": 1
+   }
+  }
+ ],
+ "census_sourced_rows_NOT_rederivable_here": {
+  "active_non_maneuverable": {
+   "count": 2113,
+   "tag": "SOURCED (GCAT census, epoch 8 Jul 2026)",
+   "meaning": "active satellites that cannot dodge \u2014 the burden-shift population"
+  },
+  "active_payloads_total": 16234,
+  "active_starlink": 10736
+ },
+ "usage_rule": "This table is the WHITELIST: no ground-level dependency ships on the surface unless it maps to a row here or a census-sourced entry above. Out-of-band services (e.g., GPS/GNSS \u2014 MEO) are NEVER invoked.",
+ "tags": "band placement MEASURED (TLE); category counts DERIVED (stated name patterns, conservative \u2014 undercounts by design); census rows SOURCED",
+ "category_caveat": "name-pattern counts are STATUS-BLIND: they include retired generations still on orbit (e.g., decades of NOAA/METEOR/DMSP in the ratchet band). Surface phrasing must say 'working and retired' or cite the census for active-only claims. Undercounting by conservative patterns is accepted; overclaiming operational status is not."
+}

@@ -1,0 +1,219 @@
+{
+  "epoch": "2026-07-15 catalog",
+  "seed": 20260715,
+  "n_draws": 100000,
+  "coupled_knobs": "ASSUMED; per D1 Q2/Q5 rulings these are (i) density-bias parameter uncertainty (1.6x median, inclination-clustering provenance), (ii) cross-section parameter uncertainty (0.30), (iii) storm FORCING relabeled occupancy-at-t0 (persistent stopgap acceptable only where band clock < storm duration). None is feedback; do not carry into the Q-B engine as such. Mean combined multiplier 2.22.",
+  "treatment_A": {
+    "treatment": "A_as_binned",
+    "total_rate_per_day": 1.4014444149172292,
+    "clock_days": 0.713549527441701,
+    "P_24h": 0.7537589672735932,
+    "bands": [
+      {
+        "band_km": [
+          150,
+          465
+        ],
+        "name": "below 465 (incl. transit)",
+        "rate_share": 0.016541796935354316,
+        "P_first_collision_here": 0.016541796935354316,
+        "tau_band_days": 43.13615565650257,
+        "satsat_share_of_band": 0.979405155427814,
+        "debris_involved_share_of_band": 0.005950761511059782
+      },
+      {
+        "band_km": [
+          465,
+          495
+        ],
+        "name": "Starlink 480 shell",
+        "rate_share": 0.9242703250418126,
+        "P_first_collision_here": 0.9242703250418126,
+        "tau_band_days": 0.7720138882630696,
+        "satsat_share_of_band": 0.9969729301311488,
+        "debris_involved_share_of_band": 0.0011140095935691997
+      },
+      {
+        "band_km": [
+          495,
+          540
+        ],
+        "name": "495-540",
+        "rate_share": 0.0056224875533976044,
+        "P_first_collision_here": 0.0056224875533976044,
+        "tau_band_days": 126.90993455565966,
+        "satsat_share_of_band": 0.9131804776086255,
+        "debris_involved_share_of_band": 0.04270281739584757
+      },
+      {
+        "band_km": [
+          540,
+          570
+        ],
+        "name": "old Starlink 550 shell",
+        "rate_share": 0.021841388191297148,
+        "P_first_collision_here": 0.021841388191297148,
+        "tau_band_days": 32.66960511814079,
+        "satsat_share_of_band": 0.9682585545931851,
+        "debris_involved_share_of_band": 0.01776950479278649
+      },
+      {
+        "band_km": [
+          570,
+          700
+        ],
+        "name": "570-700",
+        "rate_share": 0.023581793590396194,
+        "P_first_collision_here": 0.023581793590396194,
+        "tau_band_days": 30.258492625102857,
+        "satsat_share_of_band": 0.9268986608594774,
+        "debris_involved_share_of_band": 0.0450131622999453
+      },
+      {
+        "band_km": [
+          700,
+          1000
+        ],
+        "name": "legacy debris band",
+        "rate_share": 0.0045285342042435065,
+        "P_first_collision_here": 0.0045285342042435065,
+        "tau_band_days": 157.56743689228682,
+        "satsat_share_of_band": 0.28993670729623,
+        "debris_involved_share_of_band": 0.5379512631526601
+      },
+      {
+        "band_km": [
+          1000,
+          2000
+        ],
+        "name": "upper LEO (OneWeb etc.)",
+        "rate_share": 0.00361367448349873,
+        "P_first_collision_here": 0.00361367448349873,
+        "tau_band_days": 197.45816362265376,
+        "satsat_share_of_band": 0.7617098956062396,
+        "debris_involved_share_of_band": 0.1565177364917229
+      }
+    ],
+    "two_band": {
+      "floor": {
+        "median_days": 0.4947606533531623,
+        "p_24h": 0.75497,
+        "p05": 0.03647098468595075,
+        "p95": 2.1332980683020053
+      },
+      "coupled": {
+        "median_days": 0.26538335550613446,
+        "p_24h": 0.87929,
+        "p05": 0.017046116921886487,
+        "p95": 1.564991828334116
+      }
+    }
+  },
+  "treatment_B": {
+    "treatment": "B_smoothed_465_495",
+    "total_rate_per_day": 0.5711601639161616,
+    "clock_days": 1.7508223842914683,
+    "P_24h": 0.43513028306220103,
+    "bands": [
+      {
+        "band_km": [
+          150,
+          465
+        ],
+        "name": "below 465 (incl. transit)",
+        "rate_share": 0.04058828047249825,
+        "P_first_collision_here": 0.04058828047249825,
+        "tau_band_days": 43.13615565650257,
+        "satsat_share_of_band": 0.979405155427814,
+        "debris_involved_share_of_band": 0.005950761511059782
+      },
+      {
+        "band_km": [
+          465,
+          495
+        ],
+        "name": "Starlink 480 shell",
+        "rate_share": 0.8141835920664322,
+        "P_first_collision_here": 0.8141835920664322,
+        "tau_band_days": 2.1504024416014174,
+        "satsat_share_of_band": 0.9915737845528282,
+        "debris_involved_share_of_band": 0.0030303858746097883
+      },
+      {
+        "band_km": [
+          495,
+          540
+        ],
+        "name": "495-540",
+        "rate_share": 0.013795786676760121,
+        "P_first_collision_here": 0.013795786676760121,
+        "tau_band_days": 126.90993455565966,
+        "satsat_share_of_band": 0.9131804776086255,
+        "debris_involved_share_of_band": 0.04270281739584757
+      },
+      {
+        "band_km": [
+          540,
+          570
+        ],
+        "name": "old Starlink 550 shell",
+        "rate_share": 0.05359178288075699,
+        "P_first_collision_here": 0.05359178288075699,
+        "tau_band_days": 32.66960511814079,
+        "satsat_share_of_band": 0.9682585545931851,
+        "debris_involved_share_of_band": 0.01776950479278649
+      },
+      {
+        "band_km": [
+          570,
+          700
+        ],
+        "name": "570-700",
+        "rate_share": 0.057862181238961065,
+        "P_first_collision_here": 0.057862181238961065,
+        "tau_band_days": 30.258492625102857,
+        "satsat_share_of_band": 0.9268986608594774,
+        "debris_involved_share_of_band": 0.0450131622999453
+      },
+      {
+        "band_km": [
+          700,
+          1000
+        ],
+        "name": "legacy debris band",
+        "rate_share": 0.011111574947356232,
+        "P_first_collision_here": 0.011111574947356232,
+        "tau_band_days": 157.56743689228682,
+        "satsat_share_of_band": 0.28993670729623,
+        "debris_involved_share_of_band": 0.5379512631526601
+      },
+      {
+        "band_km": [
+          1000,
+          2000
+        ],
+        "name": "upper LEO (OneWeb etc.)",
+        "rate_share": 0.008866801717235267,
+        "P_first_collision_here": 0.008866801717235267,
+        "tau_band_days": 197.45816362265376,
+        "satsat_share_of_band": 0.7617098956062396,
+        "debris_involved_share_of_band": 0.1565177364917229
+      }
+    ],
+    "two_band": {
+      "floor": {
+        "median_days": 1.2141765065587877,
+        "p_24h": 0.43434,
+        "p05": 0.09009102634037756,
+        "p95": 5.2317648161789805
+      },
+      "coupled": {
+        "median_days": 0.6561465466993073,
+        "p_24h": 0.63273,
+        "p05": 0.042240459214533274,
+        "p95": 3.839910847706937
+      }
+    }
+  },
+  "note": "D1/Editor disposition 2026-07-15: A is the loss-of-control ASYMPTOTE (as-binned; the rate the system relaxes toward as phase order decays, NOT the waiting time at control loss \u2014 see phase-mixing ramp). B is a DESIGN COUNTERFACTUAL ('what if the shell were spread over 30 km'): an altitude-spreading leverage estimate worth a measured 2.785x on the in-shell clock. A and B answer different questions; never present as two estimates of one quantity; never average."
+}
