@@ -48,7 +48,7 @@ ND   = 100_000
 N0   = 10_736.0
 LAM0 = 0.2
 MU0  = 3.0 / N0
-RAW_RHO_CSV = "/root/.claude/uploads/49347731-b291-566f-8980-cd45e28fe77b/1bd8de69-qb_engine_raw_sample.csv"
+RAW_RHO_CSV = "qb_engine_raw_sample.csv"   # run from this folder (was a build-machine upload path; paths corrected 2026-09-19, outputs byte-identical)
 FEES = [0.0, 15_000.0, 50_000.0, 100_000.0, 235_000.0]
 
 def q_(a, ps=(5, 50, 95)):
@@ -323,14 +323,14 @@ out = {
      "private-collision-cost-at-threshold magnitudes (lam0 knob-median, f_imp-conditional)",
      "milestone arithmetic conditions as stated"]},
 }
-json.dump(r9(out), open("/home/claude/race_model_d3b_results.json", "w"), indent=1)
+json.dump(r9(out), open("race_model_d3b_results.json", "w", newline="\n"), indent=1)
 
 # raw sweep sample, %.9g
 hdr = ["theta","k","L","Qd","n","u","M","Qeq","Qstar","Qoa","region_eq","fstar_cournot"]
 mat = np.column_stack([th, k, L, Qd, n, u, M, base["Qeq"], base["Qst"], base["Qoa"],
                        base["reg_eq"], fstar_c])[:2000]
-np.savetxt("/home/claude/race_model_d3b_raw_sample.csv", mat, delimiter=",",
-           header=",".join(hdr), comments="", fmt="%.9g")
+with open("race_model_d3b_raw_sample.csv", "w", newline="\n") as _f:   # LF on every platform; closed before the byte-identity check reads it
+    np.savetxt(_f, mat, delimiter=",", header=",".join(hdr), comments="", fmt="%.9g")
 
 print(json.dumps(r9({
  "regions_cournot": out_map["region_shares_cournot"],
@@ -358,8 +358,8 @@ print(json.dumps(r9({
 # (4) no new headline statistics — grid-vs-sweep reconciliation only.
 # =====================================================================================
 import hashlib
-_CERT = {"/home/claude/race_model_d3b_results.json": "6f0165edf79c",
-         "/home/claude/race_model_d3b_raw_sample.csv": "72b8b25b706c"}
+_CERT = {"race_model_d3b_results.json": "6f0165edf79c",
+         "race_model_d3b_raw_sample.csv": "72b8b25b706c"}
 _att = {}
 for _p, _e in _CERT.items():
     _g = hashlib.sha256(open(_p, "rb").read()).hexdigest()[:12]
@@ -475,7 +475,7 @@ grid_out = {
             "log-uniform marginals — but condition the remaining knobs at medians; the "
             "deviation quantifies that conditioning, stated here per dispatch constraint 4")},
 }
-json.dump(r9(grid_out), open("/home/claude/race_map_grid_v1.json", "w"), indent=1)
+json.dump(r9(grid_out), open("race_map_grid_v1.json", "w", newline="\n"), indent=1)
 print(json.dumps(r9({"D8_grid": {"emitted": "race_map_grid_v1.json",
                                  "byte_identity": "PASS (asserted)",
                                  "grid_shares_cournot": grid_shares_c,

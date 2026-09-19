@@ -77,14 +77,15 @@ mcA, fA, cA = two_band(GA)
 mcB, fB, cB = two_band(GB)
 
 out = {"epoch":"2026-07-15 catalog","seed":SEED,"n_draws":100000,
-       "coupled_knobs":"ASSUMED (lognorm 1.6x/0.35; lognorm 1.0x/0.30; p_storm 0.10, 2-5x) — pending D1",
+       # coupled_knobs + note: text as ruled in review (D1, 2026-07-15) and as published in
+       # multishell_results.json; script brought into line 2026-09-19, numbers untouched.
+       "coupled_knobs":"ASSUMED; per D1 Q2/Q5 rulings these are (i) density-bias parameter uncertainty (1.6x median, inclination-clustering provenance), (ii) cross-section parameter uncertainty (0.30), (iii) storm FORCING relabeled occupancy-at-t0 (persistent stopgap acceptable only where band clock < storm duration). None is feedback; do not carry into the Q-B engine as such. Mean combined multiplier 2.22.",
        "treatment_A":resA|{"two_band":mcA}, "treatment_B":resB|{"two_band":mcB},
-       "note":"A vs B is a structural sensitivity bracket; never average. Bands' "
-              "P_first_collision assumes first event under the global no-maneuver process."}
-json.dump(out, open("multishell_results.json","w"), indent=2)
-np.savetxt("multishell_raw_sample.csv",
-           np.column_stack([fA[:2000],cA[:2000],fB[:2000],cB[:2000]]), delimiter=",",
-           header="floorA_days,coupledA_days,floorB_days,coupledB_days", comments="")
+       "note":"D1/Editor disposition 2026-07-15: A is the loss-of-control ASYMPTOTE (as-binned; the rate the system relaxes toward as phase order decays, NOT the waiting time at control loss — see phase-mixing ramp). B is a DESIGN COUNTERFACTUAL ('what if the shell were spread over 30 km'): an altitude-spreading leverage estimate worth a measured 2.785x on the in-shell clock. A and B answer different questions; never present as two estimates of one quantity; never average."}
+json.dump(out, open("multishell_results.json","w",newline="\n"), indent=2)
+with open("multishell_raw_sample.csv","w",newline="\n") as _f:   # closed (so fully flushed) before the script moves on
+    np.savetxt(_f, np.column_stack([fA[:2000],cA[:2000],fB[:2000],cB[:2000]]), delimiter=",",
+               header="floorA_days,coupledA_days,floorB_days,coupledB_days", comments="")
 
 for r,mc in ((resA,mcA),(resB,mcB)):
     print(f"\n=== {r['treatment']} — Clock {r['clock_days']:.2f} d, P(<24h) {r['P_24h']:.1%} ===")
