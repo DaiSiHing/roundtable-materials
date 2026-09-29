@@ -1,0 +1,28 @@
+{
+  "_provenance": {
+    "delta_to": "e3_energy_params.json (pin db228ca)",
+    "issued_by": "energy-biophysical-economics seat, eb-memo-04, reply to d022",
+    "consumes": "complexsys applies directly; nothing else in the base file changes"
+  },
+  "history_g_2021_24": {
+    "ruling": "RATIFIED — window onset 2021 (supersedes the base file's 2024-2032 ASSUMED label for the BACK-history; forward coupled window unchanged)",
+    "band_per_yr": [0.05, 0.10],
+    "band_status": "headline band HELD — the HS 8504.23 primary cannot raise the top (class floor 10 MVA, deliveries-not-orders, mix-shift masks the LPT slice)",
+    "sensitivity_member_g": 0.12,
+    "sensitivity_tag": "trade-consistent upper; sweep-only, never headline, until the NERC LTRA pull (which remains the sole closer of g's upper edge)"
+  },
+  "order_intake_history": {
+    "recommendation": "the 1.1-1.4x order-intake multiplier (base file, coupled_boom) also applies to the 2022-24 BACK-history — the DOE '70% y/y in the last 1-2 years' quote IS history (report signed 2024-07)",
+    "status": "mechanism-completion on primary evidence, NOT a calibration nudge; run as a history variant first — expected effect: emergent 2024 median moves from p50~31 toward the DOE-36 target with g untouched; whether it folds into headline history is complexsys's structure call",
+    "band": [1.1, 1.4],
+    "window": "2022-2024, mean-reverting per base file"
+  },
+  "import_crunch_2021_24": {
+    "ruling": "NOT RATIFIED as an import-supply haircut — RETIRED PENDING SLICE",
+    "evidence": "HS 8504.23 US general imports rose every year 2021-24 except a -9.7% dip in 2021, reaching 3.6x 2019 units by 2024 (eb_d022_history_check_results.json); the 2021-24 story at class level is demand outrunning inelastic total capacity, not import decline",
+    "replacement_mechanism": "ratified history demand (above) against the import path held at its baseline-inelastic growth band [0.00, 0.02]/yr (base file) — no haircut multiplier in the default history",
+    "re_entry_rule": "IF the >=100,000 kVA HS10 line (8504.23 statistical suffix slice — Author's one-call pull) shows units >=10% below its 2019-20 level during 2021-23, a haircut member U(0.75, 0.95) re-enters the SENSITIVITY set for those years; if flat-or-rising, the haircut retires permanently",
+    "render_gate": "no floor result renders with the haircut active until the slice rules",
+    "caveat_held_open": "the LPT-only signal is genuinely masked by mix shift (nominal value/unit fell 869k->649-676k while prices rose steeply) — the slice, not this class-wide series, adjudicates the >=100 MVA end"
+  }
+}

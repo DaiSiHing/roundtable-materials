@@ -1,0 +1,2833 @@
+{
+ "engine": "e3_transformer_queue_mc.py (re-weighing round, d042)",
+ "seed": 33,
+ "n_paths_per_run": 25000,
+ "class": "LPT (>=100 MVA)",
+ "horizon": "2025-2055 monthly (burn-in 2019-2024; age anchor 2014)",
+ "params_assert": "PASS (base + d022 + d026 + d032)",
+ "sigma_discipline": "d042/m010: sigma members are EMERGENT (s21, s24) ramp pairs on the APPROVED band's diagonal \u2014 emergent [0.03,0.15]@2021 -> [0.05,0.25]@2024 (supersedes d032) \u2014 ASSUMED-tier, VARIANT GRIDS ONLY, plus ONE MEMORIAL MEMBER at the superseded vendor-implied (0.30,0.45) so the grid spans the unresolved Mordor instrument conflict (never-silently-pick, m010 Attachment 3); a consistency map, not a fit; no member selected by outcome",
+ "sigma_band_provenance": "m010 Attachment 1 (verbatim): fit-derived at corroboration tier from a method killed for levels (reconciliation failure, Leg-C boundary); never renders; never upgrades without new evidence through the referee. Attachment 2 (headroom): the legs see generation-developer and data-center priority demand only \u2014 non-generation industrial priority purchases (fabs, rail, mining, hydrogen) are invisible to the EIA-860+LBNL lens, so the fit's numerator undercounts an unknown amount; the 0.25 top (vs the fit's 0.21) is that softness made explicit.",
+ "residual_finding": "RE-WEIGHED (d042, on m010): the TWO-CLASS mechanism is DEMOTED from leading resolution to MINOR CONTRIBUTOR \u2014 the posture test failed (Leg-A delivered share 0.053-0.105 vs engine-derived prediction [0.27,0.51]) and at the approved band sigma buys ~1-3 months of standard quote (arithmetically forced on the map). The ~20-24-vs-36 residual belongs to THREE CANDIDATES, UNRANKED (memo-26, 2026-09-18, superseding memo-08 SS3's order): QUOTE FORMATION (G3; quoting under a 7.5-year interconnection stock makes protective quotes rational, but no quotes-vs-realized primary exists and its ceiling is unbounded) / f14 DOMESTIC PATH (un-primaried half of supply; moves the whole map; carries the FLOOR condition's bias direction) / f13 BACKLOG STATE (adjudicator if a real backlog primary lands). LAST, and this one is MEASURED: two-class sigma (minor, ~1-3 mo, three-instrument corroboration at low levels). Quote formation was ranked first at d042 on two grounds; the sold-out-horizon quotes are WITHDRAWN (esr-d040/m043) and the surviving ground, the interconnection stock, presses on quote formation and on backlog state alike. An order among the three is not established",
+ "member_2021_retired": "the U(0.75,0.95) 2021 sensitivity member is RETIRED into the realized import series (this seat's call per d026): the 539-unit dip is data now; the member would double-count it",
+ "anchor_check": {
+  "MD1": {
+   "rho": 0.9,
+   "B_mo": 9.0,
+   "Wq_exact_mo": 40.50000000000001,
+   "Wq_sim_mo": 40.983052749156506,
+   "sim_se_mo": 1.115677714896094,
+   "matches": true
+  },
+  "MMc": {
+   "c": 8,
+   "rho": 0.9,
+   "mean_B_mo": 9.0,
+   "Wq_exact_mo": 7.8922461391454,
+   "Wq_sim_mo": 8.022319677851716,
+   "sim_se_mo": 0.3832860368532859,
+   "matches": true
+  }
+ },
+ "floor_oneclass_reference": {
+  "render_gated": true,
+  "gate": "FLOOR COHORT LEVELS GATED \u2014 sigma CLOSED for this study's render purposes (m010): xfmr-f12 resolves by FIT at corroboration tier (three instruments, one side of >=0.53); the purchase was DECLINED 2026-08-20 (spec + symmetric acceptance stay frozen on file; Newton-Evans sole cheaper-candidate, item-4 pre-sale mandatory); the gate stands permanently unless a referee-routed v3 or a spec-satisfying purchase reopens it. An ASSUMED sigma cannot carry a rendered number. BIAS-DIRECTION CONDITION (econ m005, binding \u2014 strengthened by the demotion): the residual is supply/quote-side \u2014 any cohort wait that EVER renders is a FLOOR and carries 'at least this long' language",
+  "history": "realized imports (SOURCED) + response term 2025+; standard intake U(1.1,1.4) 2022-24; one class",
+  "orders_side_context": "INTERCONNECTION-STOCK FACT (d042/memo-09 A-prime, Queued Up tab 17, pinned): 384.5 GW of active capacity with signed/draft interconnection agreements vs 51.2 GW of 2024 installs = 7.5 YEARS OF INSTALLS - an orders-side PRESSURE fact. These are interconnection agreements, not transformer purchase orders, and the fact does not discriminate between quote formation and a real backlog. SOLD-OUT HORIZONS WITHDRAWN (esr-d040/m043 on d161 s2; eb memo-39; csp memo-26; 2026-09-18): the 'some lines quoting 2031' and 'Hitachi committed through 2029' clauses this field carried were never sourced and are struck. What is pinned is one officer's forward expectation (GE Vernova CEO, press interview, March 2025) pooled over gas turbines, transformers and switchgear; per m043 it bounds the transformer line neither above nor below and is not a quote. Mordor's 'as long as 210 weeks' is a market-research teaser: diagnostic, corroborates nothing. NOTHING HERE CORROBORATES A QUOTE LEVEL, and no draw, prior, band or target ever read this field. The $-to-units conversion stays INADMISSIBLE as a level (price-vintage wedge +14% realized vs +80% quoted).",
+  "sigma_member": null,
+  "standard_class": {
+   "order_cohort_realized_wait_months": {
+    "2024": {
+     "p5": 5.578825396764966,
+     "p25": 7.756353731171396,
+     "p50": 9.763635044282491,
+     "p75": 12.230146116888832,
+     "p95": 17.440565147340777,
+     "censored_share": 0.0
+    },
+    "2025": {
+     "p5": 5.504662850027437,
+     "p25": 7.764953621590561,
+     "p50": 9.770373339213796,
+     "p75": 12.295022301699307,
+     "p95": 17.33811171727585,
+     "censored_share": 0.0
+    },
+    "2027": {
+     "p5": 6.462866823590453,
+     "p25": 8.970947240985229,
+     "p50": 11.107018088675192,
+     "p75": 13.716702012995722,
+     "p95": 18.929701910222523,
+     "censored_share": 0.0
+    },
+    "2030": {
+     "p5": 9.133470844376749,
+     "p25": 12.377237311156073,
+     "p50": 14.976415894828591,
+     "p75": 17.924487087831242,
+     "p95": 23.356455296795804,
+     "censored_share": 0.0
+    },
+    "2035": {
+     "p5": 6.58288971741143,
+     "p25": 9.557065925755001,
+     "p50": 12.010636708381687,
+     "p75": 14.97840413225737,
+     "p95": 20.396523551963366,
+     "censored_share": 0.0
+    },
+    "2040": {
+     "p5": 6.690287310903624,
+     "p25": 9.912264251670875,
+     "p50": 12.842783713115107,
+     "p75": 16.22974967231631,
+     "p95": 22.27394495828945,
+     "censored_share": 0.0
+    },
+    "2050": {
+     "p5": 7.325247099110177,
+     "p25": 11.098068991333562,
+     "p50": 14.635667817860744,
+     "p75": 18.49586882206476,
+     "p95": 24.60722651503503,
+     "censored_share": 0.0
+    }
+   },
+   "calibration_2024": {
+    "realized_wait_orders_2024_06": {
+     "p5": 5.578825396764966,
+     "p25": 7.756353731171396,
+     "p50": 9.763635044282491,
+     "p75": 12.230146116888832,
+     "p95": 17.440565147340777,
+     "share_ge_36": 0.00024
+    },
+    "quote_metric_dec24": {
+     "p5": 7.196760487556458,
+     "p25": 8.011101245880127,
+     "p50": 9.000792026519775,
+     "p75": 10.005626678466797,
+     "p95": 10.804723024368286,
+     "share_ge_36": 0.0
+    }
+   }
+  },
+  "corridor_diagnostic_backlog_dec24": {
+   "p5": 0.0,
+   "p25": 0.0,
+   "p50": 0.0,
+   "p75": 0.0,
+   "p95": 0.0,
+   "share_in_1462_3612": 0.0,
+   "note": "diagnostic only; algebraically the target in backlog units (m003) \u2014 never counted as independent evidence"
+  },
+  "intake_multiple_2022_24": {
+   "p5": 1.2944297082228118,
+   "p25": 1.3837312113174183,
+   "p50": 1.4615384615384615,
+   "p75": 1.5402298850574712,
+   "p95": 1.636604774535809
+  },
+  "intake_multiple_denominator_note": "multiple = total two-class arrivals 2022-24 / (3 x 754), the FIXED 2019 LPT-class anchor \u2014 not a per-year growing base (m004 H1, seconding the Author's A1)",
+  "emergent_priority_share_2022_24": {
+   "p5": 0.0,
+   "p25": 0.0,
+   "p50": 0.0,
+   "p75": 0.0,
+   "p95": 0.0
+  },
+  "share_definition_note": "d032/d034: the priority stream is EMERGENT-MATCHED \u2014 lam_p = lam_s x s/(1-s) including the intake-multiplied standard rate, so the member labels ARE emergent shares (the m004 H4 nominal-vs-emergent wedge is retired); the reported emergent share verifies the construction and averages the ramp path, so it reads below s24"
+ },
+ "floor_twoclass_s21_0.03_s24_0.05": {
+  "render_gated": true,
+  "gate": "FLOOR COHORT LEVELS GATED \u2014 sigma CLOSED for this study's render purposes (m010): xfmr-f12 resolves by FIT at corroboration tier (three instruments, one side of >=0.53); the purchase was DECLINED 2026-08-20 (spec + symmetric acceptance stay frozen on file; Newton-Evans sole cheaper-candidate, item-4 pre-sale mandatory); the gate stands permanently unless a referee-routed v3 or a spec-satisfying purchase reopens it. An ASSUMED sigma cannot carry a rendered number. BIAS-DIRECTION CONDITION (econ m005, binding \u2014 strengthened by the demotion): the residual is supply/quote-side \u2014 any cohort wait that EVER renders is a FLOOR and carries 'at least this long' language",
+  "orders_side_context": "INTERCONNECTION-STOCK FACT (d042/memo-09 A-prime, Queued Up tab 17, pinned): 384.5 GW of active capacity with signed/draft interconnection agreements vs 51.2 GW of 2024 installs = 7.5 YEARS OF INSTALLS - an orders-side PRESSURE fact. These are interconnection agreements, not transformer purchase orders, and the fact does not discriminate between quote formation and a real backlog. SOLD-OUT HORIZONS WITHDRAWN (esr-d040/m043 on d161 s2; eb memo-39; csp memo-26; 2026-09-18): the 'some lines quoting 2031' and 'Hitachi committed through 2029' clauses this field carried were never sourced and are struck. What is pinned is one officer's forward expectation (GE Vernova CEO, press interview, March 2025) pooled over gas turbines, transformers and switchgear; per m043 it bounds the transformer line neither above nor below and is not a quote. Mordor's 'as long as 210 weeks' is a market-research teaser: diagnostic, corroborates nothing. NOTHING HERE CORROBORATES A QUOTE LEVEL, and no draw, prior, band or target ever read this field. The $-to-units conversion stays INADMISSIBLE as a level (price-vintage wedge +14% realized vs +80% quoted).",
+  "sigma_member": {
+   "s21_emergent": 0.03,
+   "s24_emergent": 0.05
+  },
+  "standard_class": {
+   "order_cohort_realized_wait_months": {
+    "2024": {
+     "p5": 5.418306518119569,
+     "p25": 7.624553588585729,
+     "p50": 9.644648327798574,
+     "p75": 12.207847960671355,
+     "p95": 17.3839548364942,
+     "censored_share": 0.0
+    },
+    "2025": {
+     "p5": 5.42719425559009,
+     "p25": 7.641261292070473,
+     "p50": 9.602487715633309,
+     "p75": 12.1035179922345,
+     "p95": 17.284943095286092,
+     "censored_share": 0.0
+    },
+    "2027": {
+     "p5": 6.691066565777163,
+     "p25": 9.288184941608822,
+     "p50": 11.557039402571743,
+     "p75": 14.26139781099937,
+     "p95": 19.5080138580189,
+     "censored_share": 0.0
+    },
+    "2030": {
+     "p5": 9.11516386163209,
+     "p25": 12.788610824383534,
+     "p50": 15.620717991254825,
+     "p75": 18.72279799512091,
+     "p95": 24.176905639715002,
+     "censored_share": 0.0
+    },
+    "2035": {
+     "p5": 6.5868153643415495,
+     "p25": 9.78392632559325,
+     "p50": 12.508660260285069,
+     "p75": 15.604927248057445,
+     "p95": 21.172788803848064,
+     "censored_share": 0.0
+    },
+    "2040": {
+     "p5": 6.808424408021878,
+     "p25": 10.104033126899871,
+     "p50": 13.38057415688462,
+     "p75": 17.376398481704825,
+     "p95": 23.629405167907635,
+     "censored_share": 0.0
+    },
+    "2050": {
+     "p5": 7.615075237480846,
+     "p25": 11.908826515141492,
+     "p50": 15.630117105038318,
+     "p75": 19.724645880020585,
+     "p95": 25.98436087776152,
+     "censored_share": 0.0
+    }
+   },
+   "calibration_2024": {
+    "realized_wait_orders_2024_06": {
+     "p5": 5.418306518119569,
+     "p25": 7.624553588585729,
+     "p50": 9.644648327798574,
+     "p75": 12.207847960671355,
+     "p95": 17.3839548364942,
+     "share_ge_36": 0.00048
+    },
+    "quote_metric_dec24": {
+     "p5": 7.196760487556458,
+     "p25": 8.011101245880127,
+     "p50": 9.000792026519775,
+     "p75": 10.005626678466797,
+     "p95": 10.804723024368286,
+     "share_ge_36": 0.0
+    }
+   }
+  },
+  "corridor_diagnostic_backlog_dec24": {
+   "p5": 0.0,
+   "p25": 0.0,
+   "p50": 0.0,
+   "p75": 0.0,
+   "p95": 0.0,
+   "share_in_1462_3612": 0.0,
+   "note": "diagnostic only; algebraically the target in backlog units (m003) \u2014 never counted as independent evidence"
+  },
+  "intake_multiple_2022_24": {
+   "p5": 1.3527851458885942,
+   "p25": 1.4442970822281167,
+   "p50": 1.523872679045093,
+   "p75": 1.6069849690539346,
+   "p95": 1.706896551724138
+  },
+  "intake_multiple_denominator_note": "multiple = total two-class arrivals 2022-24 / (3 x 754), the FIXED 2019 LPT-class anchor \u2014 not a per-year growing base (m004 H1, seconding the Author's A1)",
+  "emergent_priority_share_2022_24": {
+   "p5": 0.03600940006535479,
+   "p25": 0.0391943385955362,
+   "p50": 0.04145766231005313,
+   "p75": 0.04380188949327226,
+   "p95": 0.04718911078468176
+  },
+  "share_definition_note": "d032/d034: the priority stream is EMERGENT-MATCHED \u2014 lam_p = lam_s x s/(1-s) including the intake-multiplied standard rate, so the member labels ARE emergent shares (the m004 H4 nominal-vs-emergent wedge is retired); the reported emergent share verifies the construction and averages the ramp path, so it reads below s24",
+  "priority_class": {
+   "calibration_2024_realized": {
+    "p5": 4.794708732743386,
+    "p25": 6.989212182082367,
+    "p50": 8.969365883633849,
+    "p75": 11.459421457922637,
+    "p95": 16.559822650924904
+   },
+   "wait_2027_realized": {
+    "p5": 4.81492153219712,
+    "p25": 6.97692695845605,
+    "p50": 8.929373550894708,
+    "p75": 11.500775837981367,
+    "p95": 16.61273524647551
+   }
+  }
+ },
+ "floor_twoclass_s21_0.06_s24_0.10": {
+  "render_gated": true,
+  "gate": "FLOOR COHORT LEVELS GATED \u2014 sigma CLOSED for this study's render purposes (m010): xfmr-f12 resolves by FIT at corroboration tier (three instruments, one side of >=0.53); the purchase was DECLINED 2026-08-20 (spec + symmetric acceptance stay frozen on file; Newton-Evans sole cheaper-candidate, item-4 pre-sale mandatory); the gate stands permanently unless a referee-routed v3 or a spec-satisfying purchase reopens it. An ASSUMED sigma cannot carry a rendered number. BIAS-DIRECTION CONDITION (econ m005, binding \u2014 strengthened by the demotion): the residual is supply/quote-side \u2014 any cohort wait that EVER renders is a FLOOR and carries 'at least this long' language",
+  "orders_side_context": "INTERCONNECTION-STOCK FACT (d042/memo-09 A-prime, Queued Up tab 17, pinned): 384.5 GW of active capacity with signed/draft interconnection agreements vs 51.2 GW of 2024 installs = 7.5 YEARS OF INSTALLS - an orders-side PRESSURE fact. These are interconnection agreements, not transformer purchase orders, and the fact does not discriminate between quote formation and a real backlog. SOLD-OUT HORIZONS WITHDRAWN (esr-d040/m043 on d161 s2; eb memo-39; csp memo-26; 2026-09-18): the 'some lines quoting 2031' and 'Hitachi committed through 2029' clauses this field carried were never sourced and are struck. What is pinned is one officer's forward expectation (GE Vernova CEO, press interview, March 2025) pooled over gas turbines, transformers and switchgear; per m043 it bounds the transformer line neither above nor below and is not a quote. Mordor's 'as long as 210 weeks' is a market-research teaser: diagnostic, corroborates nothing. NOTHING HERE CORROBORATES A QUOTE LEVEL, and no draw, prior, band or target ever read this field. The $-to-units conversion stays INADMISSIBLE as a level (price-vintage wedge +14% realized vs +80% quoted).",
+  "sigma_member": {
+   "s21_emergent": 0.06,
+   "s24_emergent": 0.1
+  },
+  "standard_class": {
+   "order_cohort_realized_wait_months": {
+    "2024": {
+     "p5": 5.426483783179705,
+     "p25": 7.644261423342934,
+     "p50": 9.656287845438623,
+     "p75": 12.172698039045116,
+     "p95": 17.31126336433159,
+     "censored_share": 0.0
+    },
+    "2025": {
+     "p5": 5.3234681162225925,
+     "p25": 7.562010328357384,
+     "p50": 9.595730407069135,
+     "p75": 12.143599474802105,
+     "p95": 17.226753577837748,
+     "censored_share": 0.0
+    },
+    "2027": {
+     "p5": 6.8690635366779045,
+     "p25": 9.723804639131266,
+     "p50": 12.06086109296248,
+     "p75": 14.872309063706837,
+     "p95": 20.1755843679636,
+     "censored_share": 0.0
+    },
+    "2030": {
+     "p5": 9.304356607956406,
+     "p25": 13.299418957620926,
+     "p50": 16.326131736953712,
+     "p75": 19.59012257835931,
+     "p95": 24.956778431823636,
+     "censored_share": 0.0
+    },
+    "2035": {
+     "p5": 6.578304542191809,
+     "p25": 9.93549942783697,
+     "p50": 13.049900956686145,
+     "p75": 16.376729556904174,
+     "p95": 21.961366126848585,
+     "censored_share": 0.0
+    },
+    "2040": {
+     "p5": 6.883251729669017,
+     "p25": 10.631698816701554,
+     "p50": 14.287045045895368,
+     "p75": 18.628556624922286,
+     "p95": 25.271024211703924,
+     "censored_share": 0.0
+    },
+    "2050": {
+     "p5": 8.119893207100795,
+     "p25": 12.926116017182803,
+     "p50": 16.934201516931807,
+     "p75": 21.256216168082144,
+     "p95": 27.91239908653513,
+     "censored_share": 0.0
+    }
+   },
+   "calibration_2024": {
+    "realized_wait_orders_2024_06": {
+     "p5": 5.426483783179705,
+     "p25": 7.644261423342934,
+     "p50": 9.656287845438623,
+     "p75": 12.172698039045116,
+     "p95": 17.31126336433159,
+     "share_ge_36": 0.00024
+    },
+    "quote_metric_dec24": {
+     "p5": 7.196760487556458,
+     "p25": 8.011260986328125,
+     "p50": 9.00088357925415,
+     "p75": 10.005626678466797,
+     "p95": 10.8049560546875,
+     "share_ge_36": 0.0
+    }
+   }
+  },
+  "corridor_diagnostic_backlog_dec24": {
+   "p5": 0.0,
+   "p25": 0.0,
+   "p50": 0.0,
+   "p75": 0.0,
+   "p95": 0.0,
+   "share_in_1462_3612": 0.0,
+   "note": "diagnostic only; algebraically the target in backlog units (m003) \u2014 never counted as independent evidence"
+  },
+  "intake_multiple_2022_24": {
+   "p5": 1.4129089301503095,
+   "p25": 1.5097259062776305,
+   "p50": 1.5937223695844385,
+   "p75": 1.6781609195402298,
+   "p95": 1.7838196286472148
+  },
+  "intake_multiple_denominator_note": "multiple = total two-class arrivals 2022-24 / (3 x 754), the FIXED 2019 LPT-class anchor \u2014 not a per-year growing base (m004 H1, seconding the Author's A1)",
+  "emergent_priority_share_2022_24": {
+   "p5": 0.07558753684055408,
+   "p25": 0.07996419363102666,
+   "p50": 0.08309668013466204,
+   "p75": 0.08621198700915264,
+   "p95": 0.09086603538709549
+  },
+  "share_definition_note": "d032/d034: the priority stream is EMERGENT-MATCHED \u2014 lam_p = lam_s x s/(1-s) including the intake-multiplied standard rate, so the member labels ARE emergent shares (the m004 H4 nominal-vs-emergent wedge is retired); the reported emergent share verifies the construction and averages the ramp path, so it reads below s24",
+  "priority_class": {
+   "calibration_2024_realized": {
+    "p5": 4.820790985422865,
+    "p25": 6.969318539302717,
+    "p50": 8.962722073075959,
+    "p75": 11.392978271990918,
+    "p95": 16.506160115890456
+   },
+   "wait_2027_realized": {
+    "p5": 4.805085098367727,
+    "p25": 6.971873628496722,
+    "p50": 8.92617640712616,
+    "p75": 11.446599989052018,
+    "p95": 16.51863998676587
+   }
+  }
+ },
+ "floor_twoclass_s21_0.09_s24_0.15": {
+  "render_gated": true,
+  "gate": "FLOOR COHORT LEVELS GATED \u2014 sigma CLOSED for this study's render purposes (m010): xfmr-f12 resolves by FIT at corroboration tier (three instruments, one side of >=0.53); the purchase was DECLINED 2026-08-20 (spec + symmetric acceptance stay frozen on file; Newton-Evans sole cheaper-candidate, item-4 pre-sale mandatory); the gate stands permanently unless a referee-routed v3 or a spec-satisfying purchase reopens it. An ASSUMED sigma cannot carry a rendered number. BIAS-DIRECTION CONDITION (econ m005, binding \u2014 strengthened by the demotion): the residual is supply/quote-side \u2014 any cohort wait that EVER renders is a FLOOR and carries 'at least this long' language",
+  "orders_side_context": "INTERCONNECTION-STOCK FACT (d042/memo-09 A-prime, Queued Up tab 17, pinned): 384.5 GW of active capacity with signed/draft interconnection agreements vs 51.2 GW of 2024 installs = 7.5 YEARS OF INSTALLS - an orders-side PRESSURE fact. These are interconnection agreements, not transformer purchase orders, and the fact does not discriminate between quote formation and a real backlog. SOLD-OUT HORIZONS WITHDRAWN (esr-d040/m043 on d161 s2; eb memo-39; csp memo-26; 2026-09-18): the 'some lines quoting 2031' and 'Hitachi committed through 2029' clauses this field carried were never sourced and are struck. What is pinned is one officer's forward expectation (GE Vernova CEO, press interview, March 2025) pooled over gas turbines, transformers and switchgear; per m043 it bounds the transformer line neither above nor below and is not a quote. Mordor's 'as long as 210 weeks' is a market-research teaser: diagnostic, corroborates nothing. NOTHING HERE CORROBORATES A QUOTE LEVEL, and no draw, prior, band or target ever read this field. The $-to-units conversion stays INADMISSIBLE as a level (price-vintage wedge +14% realized vs +80% quoted).",
+  "sigma_member": {
+   "s21_emergent": 0.09,
+   "s24_emergent": 0.15
+  },
+  "standard_class": {
+   "order_cohort_realized_wait_months": {
+    "2024": {
+     "p5": 5.484520462886081,
+     "p25": 7.769539271197813,
+     "p50": 9.816060786407256,
+     "p75": 12.375119536646205,
+     "p95": 17.592407634133437,
+     "censored_share": 0.0
+    },
+    "2025": {
+     "p5": 5.266312559816616,
+     "p25": 7.51279416722665,
+     "p50": 9.5261032942514,
+     "p75": 12.047094541560567,
+     "p95": 17.085205622401993,
+     "censored_share": 0.0
+    },
+    "2027": {
+     "p5": 6.887126421589664,
+     "p25": 9.927401588144756,
+     "p50": 12.545455702929994,
+     "p75": 15.517923406550462,
+     "p95": 20.814130687203516,
+     "censored_share": 0.0
+    },
+    "2030": {
+     "p5": 9.506199915906361,
+     "p25": 13.891237516937233,
+     "p50": 17.251334784213945,
+     "p75": 20.636482208594533,
+     "p95": 26.167450273911157,
+     "censored_share": 0.0
+    },
+    "2035": {
+     "p5": 6.519356056205056,
+     "p25": 9.92165685057406,
+     "p50": 13.498311141227326,
+     "p75": 17.352650154195224,
+     "p95": 23.19896915830807,
+     "censored_share": 0.0
+    },
+    "2040": {
+     "p5": 7.144081918229394,
+     "p25": 11.278803352350216,
+     "p50": 15.603879541116243,
+     "p75": 20.272576142189124,
+     "p95": 26.753674502977287,
+     "censored_share": 0.0
+    },
+    "2050": {
+     "p5": 9.08960813745715,
+     "p25": 14.33945407797247,
+     "p50": 18.578506827277003,
+     "p75": 23.186189926234924,
+     "p95": 31.41476764158846,
+     "censored_share": 0.0
+    }
+   },
+   "calibration_2024": {
+    "realized_wait_orders_2024_06": {
+     "p5": 5.484520462886081,
+     "p25": 7.769539271197813,
+     "p50": 9.816060786407256,
+     "p75": 12.375119536646205,
+     "p95": 17.592407634133437,
+     "share_ge_36": 0.00048
+    },
+    "quote_metric_dec24": {
+     "p5": 7.199042892456054,
+     "p25": 8.017379760742188,
+     "p50": 9.010277271270752,
+     "p75": 10.013705253601074,
+     "p95": 10.814670133590699,
+     "share_ge_36": 0.0
+    }
+   }
+  },
+  "corridor_diagnostic_backlog_dec24": {
+   "p5": 0.0,
+   "p25": 0.0,
+   "p50": 0.0,
+   "p75": 0.0,
+   "p95": 0.0,
+   "share_in_1462_3612": 0.0,
+   "note": "diagnostic only; algebraically the target in backlog units (m003) \u2014 never counted as independent evidence"
+  },
+  "intake_multiple_2022_24": {
+   "p5": 1.4814323607427056,
+   "p25": 1.5813439434129088,
+   "p50": 1.6702033598585322,
+   "p75": 1.7590627763041555,
+   "p95": 1.8695844385499558
+  },
+  "intake_multiple_denominator_note": "multiple = total two-class arrivals 2022-24 / (3 x 754), the FIXED 2019 LPT-class anchor \u2014 not a per-year growing base (m004 H1, seconding the Author's A1)",
+  "emergent_priority_share_2022_24": {
+   "p5": 0.11584742392032683,
+   "p25": 0.12100603562835516,
+   "p50": 0.12472101673470654,
+   "p75": 0.12835992379193897,
+   "p95": 0.13371550247942907
+  },
+  "share_definition_note": "d032/d034: the priority stream is EMERGENT-MATCHED \u2014 lam_p = lam_s x s/(1-s) including the intake-multiplied standard rate, so the member labels ARE emergent shares (the m004 H4 nominal-vs-emergent wedge is retired); the reported emergent share verifies the construction and averages the ramp path, so it reads below s24",
+  "priority_class": {
+   "calibration_2024_realized": {
+    "p5": 4.785457153612681,
+    "p25": 6.979110728290526,
+    "p50": 8.939760856327625,
+    "p75": 11.405049875424421,
+    "p95": 16.48694401185766
+   },
+   "wait_2027_realized": {
+    "p5": 4.841438165894529,
+    "p25": 6.970330657566355,
+    "p50": 8.908402708799718,
+    "p75": 11.415800898357134,
+    "p95": 16.544586683879498
+   }
+  }
+ },
+ "floor_twoclass_s21_0.12_s24_0.20": {
+  "render_gated": true,
+  "gate": "FLOOR COHORT LEVELS GATED \u2014 sigma CLOSED for this study's render purposes (m010): xfmr-f12 resolves by FIT at corroboration tier (three instruments, one side of >=0.53); the purchase was DECLINED 2026-08-20 (spec + symmetric acceptance stay frozen on file; Newton-Evans sole cheaper-candidate, item-4 pre-sale mandatory); the gate stands permanently unless a referee-routed v3 or a spec-satisfying purchase reopens it. An ASSUMED sigma cannot carry a rendered number. BIAS-DIRECTION CONDITION (econ m005, binding \u2014 strengthened by the demotion): the residual is supply/quote-side \u2014 any cohort wait that EVER renders is a FLOOR and carries 'at least this long' language",
+  "orders_side_context": "INTERCONNECTION-STOCK FACT (d042/memo-09 A-prime, Queued Up tab 17, pinned): 384.5 GW of active capacity with signed/draft interconnection agreements vs 51.2 GW of 2024 installs = 7.5 YEARS OF INSTALLS - an orders-side PRESSURE fact. These are interconnection agreements, not transformer purchase orders, and the fact does not discriminate between quote formation and a real backlog. SOLD-OUT HORIZONS WITHDRAWN (esr-d040/m043 on d161 s2; eb memo-39; csp memo-26; 2026-09-18): the 'some lines quoting 2031' and 'Hitachi committed through 2029' clauses this field carried were never sourced and are struck. What is pinned is one officer's forward expectation (GE Vernova CEO, press interview, March 2025) pooled over gas turbines, transformers and switchgear; per m043 it bounds the transformer line neither above nor below and is not a quote. Mordor's 'as long as 210 weeks' is a market-research teaser: diagnostic, corroborates nothing. NOTHING HERE CORROBORATES A QUOTE LEVEL, and no draw, prior, band or target ever read this field. The $-to-units conversion stays INADMISSIBLE as a level (price-vintage wedge +14% realized vs +80% quoted).",
+  "sigma_member": {
+   "s21_emergent": 0.12,
+   "s24_emergent": 0.2
+  },
+  "standard_class": {
+   "order_cohort_realized_wait_months": {
+    "2024": {
+     "p5": 5.790285940863978,
+     "p25": 8.210446940982221,
+     "p50": 10.297206951013894,
+     "p75": 12.959273405656985,
+     "p95": 18.089580854094702,
+     "censored_share": 0.0
+    },
+    "2025": {
+     "p5": 5.273191223564817,
+     "p25": 7.494418457910162,
+     "p50": 9.4937273371554,
+     "p75": 12.036937894822483,
+     "p95": 17.278046149970503,
+     "censored_share": 0.0
+    },
+    "2027": {
+     "p5": 6.8062501259868515,
+     "p25": 9.941222626380817,
+     "p50": 12.815351182864163,
+     "p75": 16.10008493406303,
+     "p95": 21.720892231847223,
+     "censored_share": 0.0
+    },
+    "2030": {
+     "p5": 9.947148894908677,
+     "p25": 14.824505548801575,
+     "p50": 18.487673971292647,
+     "p75": 21.953576151708823,
+     "p95": 27.540984301016962,
+     "censored_share": 0.0
+    },
+    "2035": {
+     "p5": 6.399210725828401,
+     "p25": 9.979455284484247,
+     "p50": 13.942785813507365,
+     "p75": 18.335977104993177,
+     "p95": 24.264998377117458,
+     "censored_share": 0.0
+    },
+    "2040": {
+     "p5": 7.601686375854252,
+     "p25": 12.469995665964316,
+     "p50": 17.331635385837032,
+     "p75": 22.177800096659407,
+     "p95": 28.55440131437019,
+     "censored_share": 0.0
+    },
+    "2050": {
+     "p5": 10.129123616005124,
+     "p25": 15.993282412266408,
+     "p50": 20.650278891593025,
+     "p75": 25.89294858878838,
+     "p95": 40.60171550858605,
+     "censored_share": 0.00036
+    }
+   },
+   "calibration_2024": {
+    "realized_wait_orders_2024_06": {
+     "p5": 5.790285940863978,
+     "p25": 8.210446940982221,
+     "p50": 10.297206951013894,
+     "p75": 12.959273405656985,
+     "p95": 18.089580854094702,
+     "share_ge_36": 0.00052
+    },
+    "quote_metric_dec24": {
+     "p5": 7.226090216636658,
+     "p25": 8.092299699783325,
+     "p50": 9.11228322982788,
+     "p75": 10.105360746383667,
+     "p95": 10.909962368011474,
+     "share_ge_36": 0.0
+    }
+   }
+  },
+  "corridor_diagnostic_backlog_dec24": {
+   "p5": 0.0,
+   "p25": 0.0,
+   "p50": 0.0,
+   "p75": 0.0,
+   "p95": 132.06366555638564,
+   "share_in_1462_3612": 0.0,
+   "note": "diagnostic only; algebraically the target in backlog units (m003) \u2014 never counted as independent evidence"
+  },
+  "intake_multiple_2022_24": {
+   "p5": 1.5552608311229001,
+   "p25": 1.660477453580902,
+   "p50": 1.7528735632183907,
+   "p75": 1.8461538461538463,
+   "p95": 1.9619805481874448
+  },
+  "intake_multiple_denominator_note": "multiple = total two-class arrivals 2022-24 / (3 x 754), the FIXED 2019 LPT-class anchor \u2014 not a per-year growing base (m004 H1, seconding the Author's A1)",
+  "emergent_priority_share_2022_24": {
+   "p5": 0.15692096002521186,
+   "p25": 0.16253517832909525,
+   "p50": 0.16651205817180476,
+   "p75": 0.170476915221434,
+   "p95": 0.17642476549185482
+  },
+  "share_definition_note": "d032/d034: the priority stream is EMERGENT-MATCHED \u2014 lam_p = lam_s x s/(1-s) including the intake-multiplied standard rate, so the member labels ARE emergent shares (the m004 H4 nominal-vs-emergent wedge is retired); the reported emergent share verifies the construction and averages the ramp path, so it reads below s24",
+  "priority_class": {
+   "calibration_2024_realized": {
+    "p5": 4.758564233632682,
+    "p25": 6.964206800884472,
+    "p50": 8.902268393979384,
+    "p75": 11.398047684719092,
+    "p95": 16.548685532250147
+   },
+   "wait_2027_realized": {
+    "p5": 4.832783848226076,
+    "p25": 6.988018080762483,
+    "p50": 8.941442020978553,
+    "p75": 11.451809867170764,
+    "p95": 16.638324216660042
+   }
+  }
+ },
+ "floor_twoclass_s21_0.15_s24_0.25": {
+  "render_gated": true,
+  "gate": "FLOOR COHORT LEVELS GATED \u2014 sigma CLOSED for this study's render purposes (m010): xfmr-f12 resolves by FIT at corroboration tier (three instruments, one side of >=0.53); the purchase was DECLINED 2026-08-20 (spec + symmetric acceptance stay frozen on file; Newton-Evans sole cheaper-candidate, item-4 pre-sale mandatory); the gate stands permanently unless a referee-routed v3 or a spec-satisfying purchase reopens it. An ASSUMED sigma cannot carry a rendered number. BIAS-DIRECTION CONDITION (econ m005, binding \u2014 strengthened by the demotion): the residual is supply/quote-side \u2014 any cohort wait that EVER renders is a FLOOR and carries 'at least this long' language",
+  "orders_side_context": "INTERCONNECTION-STOCK FACT (d042/memo-09 A-prime, Queued Up tab 17, pinned): 384.5 GW of active capacity with signed/draft interconnection agreements vs 51.2 GW of 2024 installs = 7.5 YEARS OF INSTALLS - an orders-side PRESSURE fact. These are interconnection agreements, not transformer purchase orders, and the fact does not discriminate between quote formation and a real backlog. SOLD-OUT HORIZONS WITHDRAWN (esr-d040/m043 on d161 s2; eb memo-39; csp memo-26; 2026-09-18): the 'some lines quoting 2031' and 'Hitachi committed through 2029' clauses this field carried were never sourced and are struck. What is pinned is one officer's forward expectation (GE Vernova CEO, press interview, March 2025) pooled over gas turbines, transformers and switchgear; per m043 it bounds the transformer line neither above nor below and is not a quote. Mordor's 'as long as 210 weeks' is a market-research teaser: diagnostic, corroborates nothing. NOTHING HERE CORROBORATES A QUOTE LEVEL, and no draw, prior, band or target ever read this field. The $-to-units conversion stays INADMISSIBLE as a level (price-vintage wedge +14% realized vs +80% quoted).",
+  "sigma_member": {
+   "s21_emergent": 0.15,
+   "s24_emergent": 0.25
+  },
+  "standard_class": {
+   "order_cohort_realized_wait_months": {
+    "2024": {
+     "p5": 6.312236446363893,
+     "p25": 9.001902400359542,
+     "p50": 11.272932539299386,
+     "p75": 14.071652667064654,
+     "p95": 19.342642785097418,
+     "censored_share": 0.0
+    },
+    "2025": {
+     "p5": 5.2830661964094245,
+     "p25": 7.560254079862343,
+     "p50": 9.592400828382996,
+     "p75": 12.128534019798359,
+     "p95": 17.281201464239803,
+     "censored_share": 0.0
+    },
+    "2027": {
+     "p5": 6.570696675263757,
+     "p25": 9.660683064436862,
+     "p50": 12.613371875005924,
+     "p75": 16.17719572776846,
+     "p95": 22.100063931583914,
+     "censored_share": 0.0
+    },
+    "2030": {
+     "p5": 10.837599702354362,
+     "p25": 16.098436842932802,
+     "p50": 19.958530879906583,
+     "p75": 23.534879839841828,
+     "p95": 29.06691041788018,
+     "censored_share": 0.0
+    },
+    "2035": {
+     "p5": 6.460298381168106,
+     "p25": 10.06011994043761,
+     "p50": 14.248188996555449,
+     "p75": 19.163807487781604,
+     "p95": 25.32017601258285,
+     "censored_share": 0.0
+    },
+    "2040": {
+     "p5": 8.335732693407053,
+     "p25": 14.10133271777709,
+     "p50": 19.098511307365072,
+     "p75": 23.896796803894333,
+     "p95": 30.264952509398828,
+     "censored_share": 0.0
+    },
+    "2050": {
+     "p5": 11.78373863366308,
+     "p25": 18.06757556430118,
+     "p50": 23.5454599969065,
+     "p75": 31.45724413764176,
+     "p95": 57.452651985228655,
+     "censored_share": 0.01092
+    }
+   },
+   "calibration_2024": {
+    "realized_wait_orders_2024_06": {
+     "p5": 6.312236446363893,
+     "p25": 9.001902400359542,
+     "p50": 11.272932539299386,
+     "p75": 14.071652667064654,
+     "p95": 19.342642785097418,
+     "share_ge_36": 0.00064
+    },
+    "quote_metric_dec24": {
+     "p5": 7.305004119873047,
+     "p25": 8.347622632980347,
+     "p50": 9.473930835723877,
+     "p75": 10.517142295837402,
+     "p95": 12.12427053451538,
+     "share_ge_36": 0.0
+    }
+   }
+  },
+  "corridor_diagnostic_backlog_dec24": {
+   "p5": 0.0,
+   "p25": 0.0,
+   "p50": 0.0,
+   "p75": 101.72346545920637,
+   "p95": 374.3290862795375,
+   "share_in_1462_3612": 0.0,
+   "note": "diagnostic only; algebraically the target in backlog units (m003) \u2014 never counted as independent evidence"
+  },
+  "intake_multiple_2022_24": {
+   "p5": 1.6379310344827587,
+   "p25": 1.7484526967285587,
+   "p50": 1.8457117595048629,
+   "p75": 1.9442970822281167,
+   "p95": 2.0641025641025643
+  },
+  "intake_multiple_denominator_note": "multiple = total two-class arrivals 2022-24 / (3 x 754), the FIXED 2019 LPT-class anchor \u2014 not a per-year growing base (m004 H1, seconding the Author's A1)",
+  "emergent_priority_share_2022_24": {
+   "p5": 0.19801293080264318,
+   "p25": 0.20404488789454037,
+   "p50": 0.20830663946457126,
+   "p75": 0.21260555795102168,
+   "p95": 0.21879136595367518
+  },
+  "share_definition_note": "d032/d034: the priority stream is EMERGENT-MATCHED \u2014 lam_p = lam_s x s/(1-s) including the intake-multiplied standard rate, so the member labels ARE emergent shares (the m004 H4 nominal-vs-emergent wedge is retired); the reported emergent share verifies the construction and averages the ramp path, so it reads below s24",
+  "priority_class": {
+   "calibration_2024_realized": {
+    "p5": 4.808303111937493,
+    "p25": 6.9867648170841115,
+    "p50": 8.953093810642018,
+    "p75": 11.450266871617197,
+    "p95": 16.66551030368889
+   },
+   "wait_2027_realized": {
+    "p5": 4.850342668847639,
+    "p25": 6.9874338399597065,
+    "p50": 8.929731783759568,
+    "p75": 11.478259278734585,
+    "p95": 16.529116562499954
+   }
+  }
+ },
+ "floor_twoclass_MEMORIAL_vendor_implied_s21_0.30_s24_0.45": {
+  "render_gated": true,
+  "gate": "FLOOR COHORT LEVELS GATED \u2014 sigma CLOSED for this study's render purposes (m010): xfmr-f12 resolves by FIT at corroboration tier (three instruments, one side of >=0.53); the purchase was DECLINED 2026-08-20 (spec + symmetric acceptance stay frozen on file; Newton-Evans sole cheaper-candidate, item-4 pre-sale mandatory); the gate stands permanently unless a referee-routed v3 or a spec-satisfying purchase reopens it. An ASSUMED sigma cannot carry a rendered number. BIAS-DIRECTION CONDITION (econ m005, binding \u2014 strengthened by the demotion): the residual is supply/quote-side \u2014 any cohort wait that EVER renders is a FLOOR and carries 'at least this long' language",
+  "orders_side_context": "INTERCONNECTION-STOCK FACT (d042/memo-09 A-prime, Queued Up tab 17, pinned): 384.5 GW of active capacity with signed/draft interconnection agreements vs 51.2 GW of 2024 installs = 7.5 YEARS OF INSTALLS - an orders-side PRESSURE fact. These are interconnection agreements, not transformer purchase orders, and the fact does not discriminate between quote formation and a real backlog. SOLD-OUT HORIZONS WITHDRAWN (esr-d040/m043 on d161 s2; eb memo-39; csp memo-26; 2026-09-18): the 'some lines quoting 2031' and 'Hitachi committed through 2029' clauses this field carried were never sourced and are struck. What is pinned is one officer's forward expectation (GE Vernova CEO, press interview, March 2025) pooled over gas turbines, transformers and switchgear; per m043 it bounds the transformer line neither above nor below and is not a quote. Mordor's 'as long as 210 weeks' is a market-research teaser: diagnostic, corroborates nothing. NOTHING HERE CORROBORATES A QUOTE LEVEL, and no draw, prior, band or target ever read this field. The $-to-units conversion stays INADMISSIBLE as a level (price-vintage wedge +14% realized vs +80% quoted).",
+  "memorial_member_note": "m010 Attachment 3 (never-silently-pick): the superseded vendor-implied level, kept so the grid SPANS the unresolved Mordor instrument conflict (fit [0.05,0.21] vs corrected-Mordor unit-basis 0.33-0.42) instead of silently adjudicating it; NOT a band member",
+  "sigma_member": {
+   "s21_emergent": 0.3,
+   "s24_emergent": 0.45
+  },
+  "standard_class": {
+   "order_cohort_realized_wait_months": {
+    "2024": {
+     "p5": 14.955022624674989,
+     "p25": 18.94230670320844,
+     "p50": 22.118417426491856,
+     "p75": 25.558669796461935,
+     "p95": 31.147355895804143,
+     "censored_share": 0.0
+    },
+    "2025": {
+     "p5": 11.387419572250614,
+     "p25": 15.561657304916647,
+     "p50": 19.05020416645985,
+     "p75": 22.768288891484612,
+     "p95": 28.81443209563183,
+     "censored_share": 0.0
+    },
+    "2027": {
+     "p5": 6.737259168861937,
+     "p25": 10.03320115126218,
+     "p50": 13.50457344411548,
+     "p75": 17.900941278839476,
+     "p95": 25.14029824520962,
+     "censored_share": 0.0
+    },
+    "2030": {
+     "p5": 10.613468536644856,
+     "p25": 17.341503224500727,
+     "p50": 22.942634523029827,
+     "p75": 28.05594845548314,
+     "p95": 34.76334187749112,
+     "censored_share": 0.0
+    },
+    "2035": {
+     "p5": 13.06016124178786,
+     "p25": 20.708600674656864,
+     "p50": 26.82192469260525,
+     "p75": 33.59679529500355,
+     "p95": 45.33534469349551,
+     "censored_share": 0.0
+    },
+    "2040": {
+     "p5": 16.172233204962357,
+     "p25": 25.737358481486826,
+     "p50": 39.41136066084091,
+     "p75": 58.86358620667664,
+     "p95": 101.99867505058984,
+     "censored_share": 0.00936
+    },
+    "2050": {
+     "p5": 35.57481097491181,
+     "p25": 71.85195812910436,
+     "p50": 74.85421215476481,
+     "p75": 77.65523259609567,
+     "p95": 82.85965722794383,
+     "censored_share": 0.7768
+    }
+   },
+   "calibration_2024": {
+    "realized_wait_orders_2024_06": {
+     "p5": 14.955022624674989,
+     "p25": 18.94230670320844,
+     "p50": 22.118417426491856,
+     "p75": 25.558669796461935,
+     "p95": 31.147355895804143,
+     "share_ge_36": 0.0112
+    },
+    "quote_metric_dec24": {
+     "p5": 14.265742778778076,
+     "p25": 17.799943447113037,
+     "p50": 20.71544361114502,
+     "p75": 23.81832790374756,
+     "p95": 28.22009592056274,
+     "share_ge_36": 0.0
+    }
+   }
+  },
+  "corridor_diagnostic_backlog_dec24": {
+   "p5": 616.272365674558,
+   "p25": 956.003720984205,
+   "p50": 1240.544835356654,
+   "p75": 1533.8795224070736,
+   "p95": 1906.2312510342606,
+   "share_in_1462_3612": 0.30628,
+   "note": "diagnostic only; algebraically the target in backlog units (m003) \u2014 never counted as independent evidence"
+  },
+  "intake_multiple_2022_24": {
+   "p5": 2.1215517241379307,
+   "p25": 2.264809902740937,
+   "p50": 2.3894783377541997,
+   "p75": 2.5167992926613616,
+   "p95": 2.670667550839964
+  },
+  "intake_multiple_denominator_note": "multiple = total two-class arrivals 2022-24 / (3 x 754), the FIXED 2019 LPT-class anchor \u2014 not a per-year growing base (m004 H1, seconding the Author's A1)",
+  "emergent_priority_share_2022_24": {
+   "p5": 0.37763730532784884,
+   "p25": 0.38411881969019906,
+   "p50": 0.3885922819161678,
+   "p75": 0.3930712244733758,
+   "p95": 0.39954593142606637
+  },
+  "share_definition_note": "d032/d034: the priority stream is EMERGENT-MATCHED \u2014 lam_p = lam_s x s/(1-s) including the intake-multiplied standard rate, so the member labels ARE emergent shares (the m004 H4 nominal-vs-emergent wedge is retired); the reported emergent share verifies the construction and averages the ramp path, so it reads below s24",
+  "priority_class": {
+   "calibration_2024_realized": {
+    "p5": 4.777297036400562,
+    "p25": 6.936249018385975,
+    "p50": 8.94827506969649,
+    "p75": 11.518523367500162,
+    "p95": 16.60925408294823
+   },
+   "wait_2027_realized": {
+    "p5": 4.788768670139027,
+    "p25": 6.95004657910558,
+    "p50": 8.927779857429723,
+    "p75": 11.43991907866954,
+    "p95": 16.525935403343073
+   }
+  }
+ },
+ "sigma_consistency_map": {
+  "render_gated": true,
+  "gate": "FLOOR COHORT LEVELS GATED \u2014 sigma CLOSED for this study's render purposes (m010): xfmr-f12 resolves by FIT at corroboration tier (three instruments, one side of >=0.53); the purchase was DECLINED 2026-08-20 (spec + symmetric acceptance stay frozen on file; Newton-Evans sole cheaper-candidate, item-4 pre-sale mandatory); the gate stands permanently unless a referee-routed v3 or a spec-satisfying purchase reopens it. An ASSUMED sigma cannot carry a rendered number. BIAS-DIRECTION CONDITION (econ m005, binding \u2014 strengthened by the demotion): the residual is supply/quote-side \u2014 any cohort wait that EVER renders is a FLOOR and carries 'at least this long' language",
+  "acceptance_rules_prestated": "memo-06 SS2, written before these runs: R1 the map reports ALL members; R2 classification thresholds: 'reaches DOE band' if std quote-dec24 p50 in [30.6, 66.0] (0.85x36 to 1.1x60), 'under' below, 'over' above \u2014 G3 quote formation means 'under' members are noted, not excluded; R3 no assumed-sigma cohort level renders (xfmr-f12); R4 nothing in the build consumed 36/60/corridor as input",
+  "map": {
+   "s21_0.03_s24_0.05": {
+    "std_quote_dec24_p50": 9.0,
+    "std_realized24_p50": 9.6,
+    "std_wait2027_p50": 11.6,
+    "prio_wait2027_p50": 8.9,
+    "backlog_dec24_p50": 0,
+    "intake_multiple_p50": 1.52
+   },
+   "s21_0.06_s24_0.10": {
+    "std_quote_dec24_p50": 9.0,
+    "std_realized24_p50": 9.7,
+    "std_wait2027_p50": 12.1,
+    "prio_wait2027_p50": 8.9,
+    "backlog_dec24_p50": 0,
+    "intake_multiple_p50": 1.59
+   },
+   "s21_0.09_s24_0.15": {
+    "std_quote_dec24_p50": 9.0,
+    "std_realized24_p50": 9.8,
+    "std_wait2027_p50": 12.5,
+    "prio_wait2027_p50": 8.9,
+    "backlog_dec24_p50": 0,
+    "intake_multiple_p50": 1.67
+   },
+   "s21_0.12_s24_0.20": {
+    "std_quote_dec24_p50": 9.1,
+    "std_realized24_p50": 10.3,
+    "std_wait2027_p50": 12.8,
+    "prio_wait2027_p50": 8.9,
+    "backlog_dec24_p50": 0,
+    "intake_multiple_p50": 1.75
+   },
+   "s21_0.15_s24_0.25": {
+    "std_quote_dec24_p50": 9.5,
+    "std_realized24_p50": 11.3,
+    "std_wait2027_p50": 12.6,
+    "prio_wait2027_p50": 8.9,
+    "backlog_dec24_p50": 0,
+    "intake_multiple_p50": 1.85
+   },
+   "MEMORIAL_vendor_implied_s21_0.30_s24_0.45": {
+    "std_quote_dec24_p50": 20.7,
+    "std_realized24_p50": 22.1,
+    "std_wait2027_p50": 13.5,
+    "prio_wait2027_p50": 8.9,
+    "backlog_dec24_p50": 1241,
+    "intake_multiple_p50": 2.39
+   }
+  },
+  "sigma_ill_conditioning_note": "m004 H4, render-binding on any future f12 render: near the DOE band the map moves ~4 mo per 0.01 of sigma \u2014 sigma enters as a BAND matched on the EMERGENT share; this round's members are emergent-matched by construction (d032/d034)",
+  "classification": {
+   "s21_0.03_s24_0.05": "under",
+   "s21_0.06_s24_0.10": "under",
+   "s21_0.09_s24_0.15": "under",
+   "s21_0.12_s24_0.20": "under",
+   "s21_0.15_s24_0.25": "under",
+   "MEMORIAL_vendor_implied_s21_0.30_s24_0.45": "under"
+  }
+ },
+ "coupled": {
+  "render_gated": true,
+  "gate": "expansion increments + NERC LTRA + sigma gate (band member (0.06,0.10) ASSUMED here \u2014 nearest the fit's arrival central 0.09)",
+  "sigma_member": {
+   "s21_emergent": 0.06,
+   "s24_emergent": 0.1
+  },
+  "standard_class": {
+   "order_cohort_realized_wait_months": {
+    "2024": {
+     "p5": 5.369602908259896,
+     "p25": 7.595025339825146,
+     "p50": 9.612397640459832,
+     "p75": 12.115624236144587,
+     "p95": 17.168716157275735,
+     "censored_share": 0.0
+    },
+    "2025": {
+     "p5": 5.284160900574669,
+     "p25": 7.513153202421122,
+     "p50": 9.503941826994634,
+     "p75": 12.01382077788098,
+     "p95": 17.136698167390236,
+     "censored_share": 0.0
+    },
+    "2027": {
+     "p5": 7.859626966068901,
+     "p25": 11.020015627067043,
+     "p50": 13.601169012425835,
+     "p75": 16.601092963051194,
+     "p95": 22.092493650274783,
+     "censored_share": 0.0
+    },
+    "2030": {
+     "p5": 11.399706258275577,
+     "p25": 16.159455010789408,
+     "p50": 19.667400719766402,
+     "p75": 23.190495044974433,
+     "p95": 28.817102617642128,
+     "censored_share": 0.0
+    },
+    "2035": {
+     "p5": 7.795327286148918,
+     "p25": 12.529286243736127,
+     "p50": 16.531429492042633,
+     "p75": 20.820031330008828,
+     "p95": 29.161617170644476,
+     "censored_share": 0.0
+    },
+    "2040": {
+     "p5": 10.755494115539658,
+     "p25": 16.206840333645594,
+     "p50": 20.56667360504374,
+     "p75": 26.230944602646456,
+     "p95": 43.44188647265831,
+     "censored_share": 0.0
+    },
+    "2050": {
+     "p5": 15.250224426028765,
+     "p25": 24.83634929611287,
+     "p50": 40.01553880105523,
+     "p75": 63.050997583257555,
+     "p95": 78.1511438902907,
+     "censored_share": 0.17064
+    }
+   },
+   "calibration_2024": {
+    "realized_wait_orders_2024_06": {
+     "p5": 5.369602908259896,
+     "p25": 7.595025339825146,
+     "p50": 9.612397640459832,
+     "p75": 12.115624236144587,
+     "p95": 17.168716157275735,
+     "share_ge_36": 0.00024
+    },
+    "quote_metric_dec24": {
+     "p5": 7.187855076789856,
+     "p25": 7.994026780128479,
+     "p50": 8.985511302947998,
+     "p75": 9.981514930725098,
+     "p95": 10.788288688659668,
+     "share_ge_36": 0.0
+    }
+   }
+  },
+  "corridor_diagnostic_backlog_dec24": {
+   "p5": 0.0,
+   "p25": 0.0,
+   "p50": 0.0,
+   "p75": 0.0,
+   "p95": 0.0,
+   "share_in_1462_3612": 0.0,
+   "note": "diagnostic only; algebraically the target in backlog units (m003) \u2014 never counted as independent evidence"
+  },
+  "intake_multiple_2022_24": {
+   "p5": 1.4186560565870912,
+   "p25": 1.5137046861184793,
+   "p50": 1.5981432360742707,
+   "p75": 1.6852343059239612,
+   "p95": 1.7900088417329796
+  },
+  "intake_multiple_denominator_note": "multiple = total two-class arrivals 2022-24 / (3 x 754), the FIXED 2019 LPT-class anchor \u2014 not a per-year growing base (m004 H1, seconding the Author's A1)",
+  "emergent_priority_share_2022_24": {
+   "p5": 0.07531708197349427,
+   "p25": 0.07964360971423037,
+   "p50": 0.08275204698121458,
+   "p75": 0.08586838614656753,
+   "p95": 0.09046271141926321
+  },
+  "share_definition_note": "d032/d034: the priority stream is EMERGENT-MATCHED \u2014 lam_p = lam_s x s/(1-s) including the intake-multiplied standard rate, so the member labels ARE emergent shares (the m004 H4 nominal-vs-emergent wedge is retired); the reported emergent share verifies the construction and averages the ramp path, so it reads below s24",
+  "priority_class": {
+   "calibration_2024_realized": {
+    "p5": 4.77434761388904,
+    "p25": 6.961098927808877,
+    "p50": 8.95458983507806,
+    "p75": 11.475877253011243,
+    "p95": 16.5778596183476
+   },
+   "wait_2027_realized": {
+    "p5": 4.734737661434128,
+    "p25": 6.937116420517142,
+    "p50": 8.89681940334355,
+    "p75": 11.449834150811023,
+    "p95": 16.46301894209922
+   }
+  }
+ },
+ "phase_diagram": {
+  "render_gated": false,
+  "gate": "LTRA GATE CLOSED (d045 delta / d046): renders subject to the fired condition-2 sentence ON the exhibit and the m012 caveat package; corner clearance -0.03 at (g=0.12, r=0.15)",
+  "g_grid": [
+   0.0,
+   0.005,
+   0.01,
+   0.015,
+   0.02,
+   0.025,
+   0.03,
+   0.035,
+   0.04,
+   0.045,
+   0.05,
+   0.055,
+   0.06,
+   0.065,
+   0.07,
+   0.075,
+   0.08,
+   0.085,
+   0.09,
+   0.095,
+   0.1,
+   0.105,
+   0.11,
+   0.115,
+   0.12,
+   0.125,
+   0.13,
+   0.135,
+   0.14
+  ],
+  "r_max_grid": [
+   0.0,
+   0.02,
+   0.04,
+   0.06,
+   0.08,
+   0.1,
+   0.12,
+   0.14,
+   0.16,
+   0.18,
+   0.2,
+   0.22,
+   0.24,
+   0.26,
+   0.28,
+   0.3,
+   0.32,
+   0.34,
+   0.36,
+   0.38,
+   0.4
+  ],
+  "classification_0drains_1marginal_2diverges": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "lead_2055_mo": [
+   [
+    11.399999618530273,
+    10.800000190734863,
+    9.800000190734863,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    12.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0
+   ],
+   [
+    13.100000381469727,
+    11.899999618530273,
+    10.600000381469727,
+    10.0,
+    12.5,
+    11.800000190734863,
+    10.699999809265137,
+    12.100000381469727,
+    9.300000190734863,
+    9.0,
+    9.0,
+    9.0,
+    12.0,
+    12.0,
+    11.699999809265137,
+    10.100000381469727,
+    9.100000381469727,
+    9.0,
+    9.0,
+    9.0,
+    9.0
+   ],
+   [
+    14.699999809265137,
+    14.5,
+    14.199999809265137,
+    13.600000381469727,
+    12.5,
+    10.699999809265137,
+    10.100000381469727,
+    10.899999618530273,
+    11.899999618530273,
+    11.5,
+    11.100000381469727,
+    11.800000190734863,
+    11.899999618530273,
+    11.300000190734863,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    11.0,
+    11.899999618530273,
+    13.600000381469727,
+    13.399999618530273,
+    14.100000381469727,
+    13.0,
+    12.100000381469727,
+    10.800000190734863,
+    10.399999618530273,
+    10.899999618530273,
+    11.899999618530273,
+    12.100000381469727,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    13.199999809265137,
+    11.5,
+    9.699999809265137,
+    10.300000190734863,
+    11.800000190734863,
+    12.699999809265137,
+    12.899999618530273,
+    12.199999809265137,
+    10.899999618530273,
+    10.800000190734863,
+    11.0,
+    11.899999618530273,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    18.200000762939453,
+    18.100000381469727,
+    16.600000381469727,
+    14.300000190734863,
+    11.399999618530273,
+    9.0,
+    10.100000381469727,
+    11.399999618530273,
+    12.100000381469727,
+    10.899999618530273,
+    11.699999809265137,
+    11.5,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273
+   ],
+   [
+    24.600000381469727,
+    20.399999618530273,
+    16.299999237060547,
+    17.200000762939453,
+    16.299999237060547,
+    13.300000190734863,
+    9.800000190734863,
+    9.399999618530273,
+    10.399999618530273,
+    11.100000381469727,
+    11.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273
+   ],
+   [
+    42.20000076293945,
+    37.79999923706055,
+    31.100000381469727,
+    23.600000381469727,
+    15.699999809265137,
+    15.0,
+    13.300000190734863,
+    9.899999618530273,
+    9.199999809265137,
+    10.0,
+    11.0,
+    12.199999809265137,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    11.899999618530273
+   ],
+   [
+    56.79999923706055,
+    52.400001525878906,
+    47.20000076293945,
+    40.400001525878906,
+    30.0,
+    18.799999237060547,
+    13.899999618530273,
+    11.800000190734863,
+    9.5,
+    9.399999618530273,
+    10.100000381469727,
+    11.399999618530273,
+    12.100000381469727,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273
+   ],
+   [
+    85.4000015258789,
+    76.0999984741211,
+    64.0999984741211,
+    49.900001525878906,
+    41.20000076293945,
+    28.899999618530273,
+    17.0,
+    13.899999618530273,
+    10.300000190734863,
+    9.0,
+    9.399999618530273,
+    10.699999809265137,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    119.19999694824219,
+    109.69999694824219,
+    95.30000305175781,
+    76.80000305175781,
+    56.29999923706055,
+    32.79999923706055,
+    22.700000762939453,
+    11.100000381469727,
+    11.199999809265137,
+    10.300000190734863,
+    9.0,
+    9.800000190734863,
+    12.100000381469727,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    12.0
+   ],
+   [
+    158.1999969482422,
+    145.60000610351562,
+    128.5,
+    107.4000015258789,
+    80.5999984741211,
+    53.099998474121094,
+    25.600000381469727,
+    12.0,
+    11.399999618530273,
+    9.899999618530273,
+    9.0,
+    9.600000381469727,
+    11.5,
+    12.0,
+    11.899999618530273,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    201.39999389648438,
+    186.6999969482422,
+    167.6999969482422,
+    141.3000030517578,
+    109.30000305175781,
+    76.0,
+    42.70000076293945,
+    15.699999809265137,
+    12.0,
+    11.399999618530273,
+    11.100000381469727,
+    9.5,
+    12.100000381469727,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    12.0,
+    11.899999618530273
+   ],
+   [
+    248.10000610351562,
+    231.8000030517578,
+    208.8000030517578,
+    178.3000030517578,
+    141.39999389648438,
+    99.5999984741211,
+    61.0,
+    28.299999237060547,
+    13.100000381469727,
+    11.399999618530273,
+    13.0,
+    10.699999809265137,
+    11.0,
+    11.899999618530273,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0
+   ],
+   [
+    297.0,
+    277.8999938964844,
+    251.6999969482422,
+    217.0,
+    173.60000610351562,
+    126.69999694824219,
+    80.4000015258789,
+    42.70000076293945,
+    12.300000190734863,
+    11.0,
+    11.0,
+    12.699999809265137,
+    12.5,
+    12.100000381469727,
+    12.0,
+    11.899999618530273,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    11.899999618530273
+   ],
+   [
+    361.0,
+    335.3999938964844,
+    297.8999938964844,
+    259.29998779296875,
+    207.8000030517578,
+    153.89999389648438,
+    100.5999984741211,
+    56.099998474121094,
+    22.799999237060547,
+    10.899999618530273,
+    10.800000190734863,
+    11.5,
+    12.5,
+    12.300000190734863,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    434.20001220703125,
+    404.3999938964844,
+    360.3999938964844,
+    300.5,
+    227.89999389648438,
+    153.3000030517578,
+    111.19999694824219,
+    62.79999923706055,
+    26.5,
+    9.399999618530273,
+    10.600000381469727,
+    11.800000190734863,
+    12.300000190734863,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    11.899999618530273
+   ],
+   [
+    514.7999877929688,
+    481.6000061035156,
+    430.5,
+    360.29998779296875,
+    275.0,
+    185.89999389648438,
+    107.19999694824219,
+    48.900001525878906,
+    27.600000381469727,
+    9.0,
+    11.199999809265137,
+    11.800000190734863,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    606.5999755859375,
+    566.4000244140625,
+    505.79998779296875,
+    422.29998779296875,
+    321.0,
+    218.39999389648438,
+    126.80000305175781,
+    58.5,
+    14.100000381469727,
+    9.0,
+    11.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    609.0,
+    609.0,
+    594.7000122070312,
+    499.1000061035156,
+    382.6000061035156,
+    261.6000061035156,
+    155.60000610351562,
+    76.5,
+    24.799999237060547,
+    12.300000190734863,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    12.0
+   ],
+   [
+    609.0,
+    609.0,
+    609.0,
+    584.0,
+    449.8999938964844,
+    310.5,
+    188.1999969482422,
+    96.80000305175781,
+    36.79999923706055,
+    10.5,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    12.0
+   ],
+   [
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    524.2999877929688,
+    364.29998779296875,
+    226.60000610351562,
+    121.0999984741211,
+    51.400001525878906,
+    10.199999809265137,
+    12.399999618530273,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    11.899999618530273,
+    11.899999618530273,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    608.2999877929688,
+    424.8999938964844,
+    264.20001220703125,
+    143.8000030517578,
+    64.5,
+    18.200000762939453,
+    13.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    12.0
+   ],
+   [
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    495.5,
+    311.70001220703125,
+    173.6999969482422,
+    82.4000015258789,
+    27.5,
+    12.899999618530273,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    567.2999877929688,
+    361.79998779296875,
+    204.60000610351562,
+    100.5,
+    37.79999923706055,
+    9.100000381469727,
+    12.399999618530273,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    11.899999618530273
+   ],
+   [
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    417.1000061035156,
+    238.60000610351562,
+    120.4000015258789,
+    50.70000076293945,
+    10.300000190734863,
+    12.399999618530273,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    474.8999938964844,
+    273.1000061035156,
+    142.60000610351562,
+    61.599998474121094,
+    15.800000190734863,
+    14.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ],
+   [
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    547.9000244140625,
+    318.6000061035156,
+    167.10000610351562,
+    75.5,
+    23.5,
+    13.300000190734863,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    11.899999618530273
+   ],
+   [
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    609.0,
+    360.79998779296875,
+    194.1999969482422,
+    92.9000015258789,
+    33.400001525878906,
+    9.600000381469727,
+    11.699999809265137,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0,
+    12.0
+   ]
+  ],
+  "fine_boundary_r_needed_by_g": {
+   "0.0000": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0025": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0050": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0075": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0100": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0125": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0150": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0175": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0200": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0225": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0230": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0250": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0275": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0300": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0325": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.0
+   },
+   "0.0350": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.01
+   },
+   "0.0375": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.045
+   },
+   "0.0400": {
+    "thr80": 0.0,
+    "thr60": 0.0,
+    "thr40": 0.065
+   },
+   "0.0425": {
+    "thr80": 0.0,
+    "thr60": 0.025,
+    "thr40": 0.075
+   },
+   "0.0450": {
+    "thr80": 0.015,
+    "thr60": 0.05,
+    "thr40": 0.085
+   },
+   "0.0475": {
+    "thr80": 0.04,
+    "thr60": 0.065,
+    "thr40": 0.085
+   },
+   "0.0480": {
+    "thr80": 0.045,
+    "thr60": 0.07,
+    "thr40": 0.09
+   },
+   "0.0500": {
+    "thr80": 0.06,
+    "thr60": 0.08,
+    "thr40": 0.095
+   },
+   "0.0525": {
+    "thr80": 0.075,
+    "thr60": 0.09,
+    "thr40": 0.105
+   },
+   "0.0550": {
+    "thr80": 0.085,
+    "thr60": 0.1,
+    "thr40": 0.11
+   },
+   "0.0560": {
+    "thr80": 0.085,
+    "thr60": 0.1,
+    "thr40": 0.115
+   },
+   "0.0575": {
+    "thr80": 0.095,
+    "thr60": 0.105,
+    "thr40": 0.12
+   },
+   "0.0600": {
+    "thr80": 0.1,
+    "thr60": 0.11,
+    "thr40": 0.125
+   },
+   "0.0625": {
+    "thr80": 0.105,
+    "thr60": 0.12,
+    "thr40": 0.13
+   },
+   "0.0650": {
+    "thr80": 0.115,
+    "thr60": 0.125,
+    "thr40": 0.135
+   },
+   "0.0675": {
+    "thr80": 0.12,
+    "thr60": 0.13,
+    "thr40": 0.14
+   },
+   "0.0700": {
+    "thr80": 0.125,
+    "thr60": 0.135,
+    "thr40": 0.145
+   },
+   "0.0725": {
+    "thr80": 0.125,
+    "thr60": 0.135,
+    "thr40": 0.145
+   },
+   "0.0750": {
+    "thr80": 0.13,
+    "thr60": 0.14,
+    "thr40": 0.15
+   },
+   "0.0775": {
+    "thr80": 0.135,
+    "thr60": 0.14,
+    "thr40": 0.155
+   },
+   "0.0800": {
+    "thr80": 0.135,
+    "thr60": 0.145,
+    "thr40": 0.155
+   },
+   "0.0825": {
+    "thr80": 0.13,
+    "thr60": 0.145,
+    "thr40": 0.155
+   },
+   "0.0850": {
+    "thr80": 0.13,
+    "thr60": 0.14,
+    "thr40": 0.145
+   },
+   "0.0875": {
+    "thr80": 0.135,
+    "thr60": 0.14,
+    "thr40": 0.15
+   },
+   "0.0900": {
+    "thr80": 0.135,
+    "thr60": 0.14,
+    "thr40": 0.15
+   },
+   "0.0925": {
+    "thr80": 0.14,
+    "thr60": 0.145,
+    "thr40": 0.155
+   },
+   "0.0950": {
+    "thr80": 0.14,
+    "thr60": 0.15,
+    "thr40": 0.155
+   },
+   "0.0975": {
+    "thr80": 0.145,
+    "thr60": 0.15,
+    "thr40": 0.16
+   },
+   "0.1000": {
+    "thr80": 0.145,
+    "thr60": 0.155,
+    "thr40": 0.16
+   },
+   "0.1025": {
+    "thr80": 0.15,
+    "thr60": 0.155,
+    "thr40": 0.165
+   },
+   "0.1050": {
+    "thr80": 0.155,
+    "thr60": 0.16,
+    "thr40": 0.165
+   },
+   "0.1075": {
+    "thr80": 0.155,
+    "thr60": 0.16,
+    "thr40": 0.17
+   },
+   "0.1100": {
+    "thr80": 0.16,
+    "thr60": 0.165,
+    "thr40": 0.17
+   },
+   "0.1125": {
+    "thr80": 0.16,
+    "thr60": 0.165,
+    "thr40": 0.175
+   },
+   "0.1150": {
+    "thr80": 0.165,
+    "thr60": 0.17,
+    "thr40": 0.175
+   },
+   "0.1175": {
+    "thr80": 0.165,
+    "thr60": 0.17,
+    "thr40": 0.18
+   },
+   "0.1200": {
+    "thr80": 0.17,
+    "thr60": 0.175,
+    "thr40": 0.18
+   },
+   "0.1225": {
+    "thr80": 0.17,
+    "thr60": 0.175,
+    "thr40": 0.185
+   },
+   "0.1250": {
+    "thr80": 0.17,
+    "thr60": 0.18,
+    "thr40": 0.185
+   },
+   "0.1275": {
+    "thr80": 0.175,
+    "thr60": 0.18,
+    "thr40": 0.19
+   },
+   "0.1300": {
+    "thr80": 0.175,
+    "thr60": 0.185,
+    "thr40": 0.19
+   },
+   "0.1325": {
+    "thr80": 0.18,
+    "thr60": 0.185,
+    "thr40": 0.195
+   },
+   "0.1350": {
+    "thr80": 0.18,
+    "thr60": 0.185,
+    "thr40": 0.195
+   },
+   "0.1375": {
+    "thr80": 0.185,
+    "thr60": 0.19,
+    "thr40": 0.195
+   },
+   "0.1390": {
+    "thr80": 0.185,
+    "thr60": 0.19,
+    "thr40": 0.2
+   },
+   "0.1400": {
+    "thr80": 0.185,
+    "thr60": 0.19,
+    "thr40": 0.2
+   }
+  },
+  "boundary_rule_of_record": "m012 SS2: first r with quote(2055) <= threshold; thresholds 80/60/40 mo; r step 0.005; the boundary is a BAND across thresholds and the exhibit draws it as one; the strict thr-40 member is the corner-clearance basis (d046)",
+  "corner_computed": {
+   "g": 0.12,
+   "r_needed_thr80_60_40": [
+    0.17,
+    0.175,
+    0.18
+   ],
+   "clearance_to_cap_floor_0.15_strict": -0.03,
+   "note": "COMPUTED (d045 condition 1) \u2014 energy's linear-local extrapolation 0.148-0.158 undershot; the boundary steepens beyond g=0.10"
+  },
+  "condition_2_sentence_fired": "the boundary is crossed at the corner: hot-zone demand against the slow end of skill formation is the one region of the map where the queue diverges",
+  "us_placement": {
+   "national_floor_g": [
+    0.02,
+    0.035
+   ],
+   "coupled_band_g": [
+    0.05,
+    0.12
+   ],
+   "regional_sweep_member_g": 0.14,
+   "regional_tag": "ERCOT-derived REGIONAL-EXTREME: sweep/regional annotation only, NEVER a national render (d045 delta)",
+   "tripwire": "LTRA-2026 10-yr summer growth outside [168, 280] GW fires a re-band round (closure is against the 2025 vintage of record)"
+  },
+  "definition": "central params, no noise; one-class, no intake; r_max = skill-capped growth of capacity itself (expandable, no start delay \u2014 optimistic bound); import-response term ACTIVE; response-term CEILING (ASSUMED, central 3x). 2026-09-19 (csp-d076; energy memo-43, Erratum 3): where the boundary sits depends on that ceiling from about 3%/yr and MOST at 3.5-5.6%/yr, not at the right-hand edge; every published rate clears at every ceiling in 2.5-3.5x. Above about 6%/yr r_needed is good to two or three search steps and the SIGN of the ceiling's effect is not resolved: the import response is a delayed on/off rule (dead time; symmetric relaxation, ASSUMED), and whether its relaxation triggers changes the late path (e3_boundary_oscillation_probe.py). Energy's replacement sentence (memo-43 SS5) is carried on the exhibit verbatim",
+  "m012_caveat_package_verbatim": "At the forecast range NERC publishes, the expansion capability the skill cap permits clears the divergence boundary \u2014 by \u00d71.3 at the hottest stated regional rate (5.6%/yr) and absolutely at the national rate, where the fitted import response alone prevents divergence. The divergence wedge is real and visible on the diagram: sustained demand growth beyond roughly 7\u00be%/yr on the strictest reading of \"cleared\" and 10\u00bd%/yr on the loosest \u2014 the record draws a band, not a line, and all of it is hotter than any published forecast \u2014 pushes the required expansion rate through the primaried skill-cap floor (boundary 0.145\u20130.16/yr at g=0.10). The strictest curve sits within one search step of that floor from about 7 to 9\u00bd%/yr, so its first crossing is located no more finely than that. Where the boundary sits leans on the assumed import ceiling from about 3%/yr upward (the \u00d71.3 is \u00d71.25 to \u00d71.5 across that assumption); that every published rate clears does not: at the hottest, 5.6%/yr, the margin is six search steps at the least favorable ceiling. Boundaries computed on an optimistic no-start-delay bound (true clearances are smaller), and the x-axis itself is a moving forecast: NERC's own 10-year growth projection rose 55\u219280\u2192132\u2192224 GW across four vintages \u2014 the diagram's placement moves right if the escalation continues.",
+  "mc_band_carry_note": "the MC demand bands (floor g, coupled boom g) deliberately keep pre-closure values this round per the d045 reproduction-call split; they feed only render-gated outputs; the closed bands carry into MC at the next MC-touching round"
+ },
+ "runtime_s": 50.7
+}

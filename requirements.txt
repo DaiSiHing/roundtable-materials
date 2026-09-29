@@ -4,3 +4,5 @@
 numpy
 scipy        # the-uneven-month/coupled_tail_mc.py only
 matplotlib   # the-uneven-month figures only
+pandas       # just-in-time-world/eb_d039_sigma_fit.py only
+openpyxl     # just-in-time-world/eb_d039_sigma_fit.py only (reads the LBNL workbook)

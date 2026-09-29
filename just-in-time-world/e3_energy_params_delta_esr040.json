@@ -1,0 +1,15 @@
+{
+  "_provenance": {
+    "delta_to": "e3_energy_params.json chain (... -> e3_energy_params_delta_d032.json)",
+    "issued_by": "energy-biophysical-economics seat, memo-39 / eb-d050, reply to esr-d040 (m043 s5.3)",
+    "date": "2026-09-18",
+    "scope": "supersedes ONE key of the d032 delta: f13_admissibility.soldout_horizons. No parameter, band, prior or target is touched; none ever read that key."
+  },
+  "f13_admissibility": {
+    "dollar_conversion": "UNCHANGED from d032: INADMISSIBLE as a unit-backlog estimator at current disclosure granularity",
+    "soldout_horizons": "WITHDRAWN IN FULL. d032 called three dated horizons 'unit-free lead-time primaries, admissible now'. This seat never read a source for any of them; it adopted quoted phrases from econ m005, which econ has withdrawn (m043). What exists (author/sources/closeout_pull/energyconnects_bloomberg_gev_2025-03-12.html, md5 18ce4dac2c7d7ab687204969ff5e62dd, read unfiltered by this seat 2026-09-18): ONE officer statement, GE Vernova CEO, Bloomberg TV at CERAWeek, 11 March 2025 - backlog for 'gas turbines, power transformers and switchgear stretches into 2028'; 'I would expect by the end of the summer, we will be largely sold out through the end of '28 with this equipment'. The document contains no '2031' and no Hitachi statement. In the energy lens it is NOT a transformer lead-time instrument on three counts: (1) POOLED across three product lines, so it bounds the transformer line in neither direction; (2) EXPECTATION tense, not a state; (3) a BACKLOG HORIZON IS NOT A QUOTE - the date through which slots are sold is a stock-over-flow statement about the order book, not a delivery time offered to a named buyer on a named line. Qualifying instances of a dated, line-attributed transformer horizon on record: ZERO.",
+    "consequence_for_memo_06": "the sigma adjudication (s2), the sensitivity bands (s3), the purchase spec (s4) and the dollar-conversion ruling (s5, first half) DO NOT rest on the horizons and STAND. Withdrawn: s1's 'admissible today' clause; s2's closing note that 'GEV quoting 2031 is direct evidence that quote-formation is a real mechanism'; s5's 'separately and immediately admissible' paragraph; s6's 'the horizons as lead-time corroboration' under Established.",
+    "quote_formation": "this seat no longer offers any horizon as evidence for the quote-formation mechanism. Whether it holds rank 1 in the residual on the orders-stock ground alone is complex-systems' ruling (E3 line 787), not this seat's.",
+    "upgrade_path": "UNCHANGED from d032. Added: a horizon becomes admissible when it is (a) read at a named document by the seat ruling on it, (b) attributed to the transformer line, (c) dated, (d) stated as a quote or a booked state, not an expectation."
+  }
+}

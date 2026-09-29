@@ -5,6 +5,7 @@ The public reproducibility sets for the studies published at
 (fixed seeds), results records, raw-draw samples and specifications. Every
 headline number in a study traces to a file here.
 
+- [`just-in-time-world/`](just-in-time-world/) - The Just-in-Time World
 - [`keys-to-orbit/`](keys-to-orbit/) - The Keys to Orbit - Who Controls Low-Earth Orbit, and How Close Is the Cascade?
 - [`the-uneven-month/`](the-uneven-month/) - The Uneven Month - How a 2026 Oil Shock Lands on U.S. Households
 

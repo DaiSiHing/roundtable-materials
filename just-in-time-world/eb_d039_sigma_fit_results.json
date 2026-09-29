@@ -1,0 +1,206 @@
+{
+  "by_year": {
+    "2022": {
+      "legA_priority_units_central": 79,
+      "legA_priority_units_corner_range": [
+        59,
+        117
+      ],
+      "legA_utility_units_central": 15,
+      "legB_units_central": 36,
+      "legB_units_corner_range": [
+        8,
+        107
+      ],
+      "denominator": 908,
+      "sigma_delivered_envelope": [
+        0.0741,
+        0.2472
+      ],
+      "sigma_delivered_central": 0.1268,
+      "sigma_arrival_envelope": [
+        0.057,
+        0.2472
+      ],
+      "sigma_arrival_central": 0.1103,
+      "legA_share_of_denominator": [
+        0.0652,
+        0.1289
+      ]
+    },
+    "2023": {
+      "legA_priority_units_central": 94,
+      "legA_priority_units_corner_range": [
+        70,
+        149
+      ],
+      "legA_utility_units_central": 30,
+      "legB_units_central": 37,
+      "legB_units_corner_range": [
+        9,
+        107
+      ],
+      "denominator": 1509,
+      "sigma_delivered_envelope": [
+        0.0525,
+        0.17
+      ],
+      "sigma_delivered_central": 0.0874,
+      "sigma_arrival_envelope": [
+        0.0404,
+        0.17
+      ],
+      "sigma_arrival_central": 0.076,
+      "legA_share_of_denominator": [
+        0.0467,
+        0.0987
+      ]
+    },
+    "2024": {
+      "legA_priority_units_central": 132,
+      "legA_priority_units_corner_range": [
+        101,
+        193
+      ],
+      "legA_utility_units_central": 26,
+      "legB_units_central": 72,
+      "legB_units_corner_range": [
+        12,
+        251
+      ],
+      "denominator": 1943,
+      "sigma_delivered_envelope": [
+        0.0581,
+        0.2284
+      ],
+      "sigma_delivered_central": 0.1051,
+      "sigma_arrival_envelope": [
+        0.0447,
+        0.2284
+      ],
+      "sigma_arrival_central": 0.0914,
+      "legA_share_of_denominator": [
+        0.0519,
+        0.0993
+      ]
+    }
+  },
+  "window_2022_24": {
+    "sigma_delivered_envelope": [
+      0.0595,
+      0.2121
+    ],
+    "sigma_arrival_envelope": [
+      0.0458,
+      0.2121
+    ],
+    "sigma_arrival_central": 0.09,
+    "half_width": 0.0832
+  },
+  "tests": {
+    "1_reconciliation_kill": {
+      "pass": false,
+      "detail": {
+        "2022": {
+          "ferc353_additions_musd": 8013.8,
+          "unit_value_musd": 1.073,
+          "utility_units_est": [
+            1652,
+            3630
+          ],
+          "priority_units": [
+            67,
+            224
+          ],
+          "components_total": [
+            1719,
+            3854
+          ],
+          "components_total_frozen_slots_only": [
+            1934,
+            3585
+          ],
+          "denominator": 908,
+          "band_overlaps_pm20pct": false,
+          "band_overlaps_pm20pct_frozen_slots_only": false
+        },
+        "2023": {
+          "ferc353_additions_musd": 9311.9,
+          "unit_value_musd": 0.948,
+          "utility_units_est": [
+            2172,
+            4774
+          ],
+          "priority_units": [
+            79,
+            256
+          ],
+          "components_total": [
+            2251,
+            5030
+          ],
+          "components_total_frozen_slots_only": [
+            2535,
+            4676
+          ],
+          "denominator": 1509,
+          "band_overlaps_pm20pct": false,
+          "band_overlaps_pm20pct_frozen_slots_only": false
+        },
+        "2024": {
+          "ferc353_additions_musd": 11175.3,
+          "unit_value_musd": 1.149,
+          "utility_units_est": [
+            2152,
+            4728
+          ],
+          "priority_units": [
+            113,
+            444
+          ],
+          "components_total": [
+            2265,
+            5172
+          ],
+          "components_total_frozen_slots_only": [
+            2545,
+            4822
+          ],
+          "denominator": 1943,
+          "band_overlaps_pm20pct": true,
+          "band_overlaps_pm20pct_frozen_slots_only": false
+        }
+      }
+    },
+    "2_envelope_le_0p08": {
+      "pass": false,
+      "half_width": 0.0832
+    },
+    "3_posture_legA_in_0p27_0p51": {
+      "pass": false,
+      "legA_2224_share": [
+        0.0529,
+        0.1053
+      ]
+    },
+    "4_Aprime_direction": {
+      "active_cap_with_IA_GW": 384.5,
+      "annual_installs_GW_2024_all_owners": 51.2,
+      "ratio_orders_stock_to_annual_installs": 7.5,
+      "direction_check": "orders stock >> annual installs -> installations understate boom-era orders; wedge >= 1 corroborated"
+    }
+  },
+  "bucket_fired": "NOT TRIGGERED \u2014 reconciliation kill precondition failed (method rejected for levels); would-have-fired: below 0.30 -> SOURCED-DERIVED at value, mixture STRENGTHENS, levels render",
+  "ppi_check": {
+    "annual_means": {
+      "2019": 197.3,
+      "2020": 200.0,
+      "2021": 234.6,
+      "2022": 315.7,
+      "2023": 332.8
+    },
+    "path_2020_to_2023": 1.664,
+    "gap_2024_handling": "series ends 2023 (stated gap): 2024 carried as flagged extrapolation at the 2021-23 CAGR band \u2014 role is sanity-check only; Leg C division uses realized same-year slice unit values, so the gap blocks nothing"
+  },
+  "crosscheck_generator_level_vs_plant_level": "the Author's committed generator-level JSON is the fidelity cross-check; plant-level aggregation (v2's filter) computed here from the same pinned vintages"
+}

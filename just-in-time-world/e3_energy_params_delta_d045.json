@@ -1,0 +1,47 @@
+{
+  "_provenance": {
+    "delta_to": "e3_energy_params.json chain (db228ca -> 07019ea -> ae412e9 -> d032/d043 band closure)",
+    "issued_by": "energy-biophysical-economics seat, eb-memo-10, reply to d045",
+    "primary": "NERC LTRA 2025 (md5 3c9ed67f...) + 2024-corrected vintage; stated numbers verified in pinned text"
+  },
+  "g_band_closure": {
+    "floor_band_g": [
+      0.02,
+      0.035
+    ],
+    "floor_basis": "national aggregate summer-peak CAGR ~2.3-2.4%/yr (224 GW on an 870-900 GW base; committed-projects-only bias is DOWNWARD = floor direction); replacement component slower",
+    "coupled_band_g": [
+      0.05,
+      0.12
+    ],
+    "coupled_window": "2025-2035 (the LTRA horizon; taper to floor thereafter via the engine's existing mechanism)",
+    "coupled_top_basis": "PJM NEL 4.8%/yr stated x additions elasticity 2.5 = 0.120; the former g=0.12 sweep member GRADUATES to the band top, now LTRA-anchored",
+    "sweep_member_g": 0.14,
+    "sweep_member_tag": "REGIONAL-EXTREME (ERCOT 5.6%/yr x 2.5 = 0.139): sweep only, never a national render",
+    "elasticity_slot": {
+      "band": [
+        1.5,
+        2.5
+      ],
+      "tag": "ESTIMATED \u2014 units track additions; in step-up phases additions growth runs 1.5-2.5x load CAGR (the 4.1x vintage escalation is the additions signal re-forming)"
+    },
+    "tripwire": "if LTRA-2026 revises 10-yr summer growth outside [168, 280] GW (\u00b125% of 224), a re-band round fires automatically \u2014 the closure is against the 2025 vintage of record"
+  },
+  "phase_diagram_render_ruling": {
+    "gate": "LTRA gate CLOSED \u2014 the phase diagram RENDERS, subject to two conditions",
+    "condition_1_extend_axis": "the boundary at g in (0.10, 0.12] is presently an EXTRAPOLATION (r_needed ~0.148-0.158 at 0.12, linear-local); the engine must COMPUTE the extended cells before the diagram renders with the 0.12 edge drawn",
+    "condition_2_corner_sentence": "the 'clears everywhere' sentence is RETIRED. Replacement (pre-stated so the computed outcome cannot tune it): if computed clearance at (g=0.12, r_max=0.15) is >= +0.01 -> 'clears across the closed band, margin thinnest at the hot-zone corner'; within \u00b10.01 -> 'marginal within computational precision at the corner \u2014 the corner is the watch condition'; <= -0.01 -> 'the boundary is crossed at the corner: hot-zone demand against the slow end of skill formation is the one region of the map where the queue diverges'",
+    "us_placement": "drawn at the closed bands: floor [0.020,0.035], coupled [0.05,0.12]; the corner caveat carried on the exhibit itself, not a footnote",
+    "extrapolated_r_needed_at_g012": [
+      0.148,
+      0.158
+    ],
+    "corner_clearance_extrapolated": [
+      -0.008,
+      0.002
+    ]
+  },
+  "reproduction_call": {
+    "call": "SPLIT: FULL re-reproduction (seed 7, coarse grid per memo-03 \u00a77) for the EXTENDED boundary cells g in (0.10, 0.12] and the corner clearance sign; FLAG-level for everything else (band annotations, strings, US placement) \u2014 the g closure touches the scenario axis, not the calibrated history"
+  }
+}

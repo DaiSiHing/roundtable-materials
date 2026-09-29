@@ -1,0 +1,56 @@
+{
+  "_provenance": {
+    "delta_to": "e3_energy_params.json (db228ca) as amended by e3_energy_params_delta_d022.json (07019ea)",
+    "issued_by": "energy-biophysical-economics seat, eb-memo-05, reply to d026",
+    "fit_record": "eb_d026_joint_refit.py + results (slice stats, response fit, one-class cross-check)"
+  },
+  "import_history_2019_24": {
+    "ruling": "REPLACED \u2014 the [0,0.02]/yr baseline path is retired as history; the engine consumes the slice's realized path directly (SOURCED, class-validated 617=617)",
+    "units_by_year": {
+      "2017": 520,
+      "2018": 505,
+      "2019": 617,
+      "2020": 729,
+      "2021": 539,
+      "2022": 771,
+      "2023": 1372,
+      "2024": 1806
+    },
+    "memo04_disposition": "memo-04's no-haircut ruling stands (2021 dip handled by the pre-stated member, which FIRED as designed); its 'baseline-inelastic' forward path is WITHDRAWN for 2022-24 \u2014 the response was delayed-elastic, not inelastic"
+  },
+  "import_response_term": {
+    "form": "dead-time + ramp: US-bound LPT imports hold baseline (short-run inelastic, dip risk in the crunch year), then grow toward the backlog signal at r_imp until relaxed or capped",
+    "dead_time_months_band": [
+      12,
+      30
+    ],
+    "dead_time_central": 18,
+    "r_imp_per_yr_band": [
+      0.3,
+      0.55
+    ],
+    "r_imp_central": 0.45,
+    "observed_duration_yr_no_saturation": 3,
+    "ceiling_x_pre_boom_baseline": [
+      2.5,
+      3.5
+    ],
+    "ceiling_tag": "ASSUMED \u2014 no world-capacity primary; expose as scenario knob",
+    "relaxation": "symmetric-with-lag: imports fall back toward baseline when the backlog signal clears (same dead-time order) [ASSUMED]",
+    "note_2021_member": "the U(0.75,0.95) 2021 sensitivity member is the response term's own dead-time dip; once the engine carries the term, the member can retire into it (complexsys's call \u2014 one less free knob)"
+  },
+  "intake_band": {
+    "class_agnostic": "NO intake multiplier in [1.1,1.4] survives the realized import path in one FIFO class (probes + flow-conservation cross-check); the one-class rescue corner needs 3.4-4.4x sustained \u2014 REJECTED-WITH-REASON (double-ordering is transient by mechanism; the 70% primary covers 1-2 years, not three sustained)",
+    "two_class_conditioning": "the 1.1-1.4 band RE-SCOPES to the STANDARD (utility) class's intake; TOTAL intake 2022-24 carries multiples 1.7-2.9x (DOE-implied), the excess being the priority-class direct-purchase stream; the split parameter sigma = priority share of LPT purchases is xfmr-f12's primary \u2014 NOT fittable from the slice",
+    "sigma_sensitivity_band_ASSUMED": [
+      0.1,
+      0.5
+    ],
+    "sigma_discipline": "sigma is never tuned to reproduce 36 \u2014 same DO-NOT-INPUT logic as lead time; when xfmr-f12 lands, the emergent standard-class quote is the calibration CHECK"
+  },
+  "render_posture": {
+    "unblocked_by_this_delta": "engine structure change (two-class history), the response term, the realized import path, variant grids over the sigma sensitivity band",
+    "still_gated": "floor COHORT LEVELS render only when sigma is primaried (xfmr-f12) \u2014 an assumed sigma cannot carry a rendered number; the gate transfers from this seat to xfmr-f12",
+    "upgrade_named": "domestic production path 2020-24 is now the un-primaried half of supply (imports are primaried); EIA-860M / Commerce survey update / manufacturer filings would close it \u2014 upgrade, not gate"
+  }
+}

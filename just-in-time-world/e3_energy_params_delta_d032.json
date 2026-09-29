@@ -1,0 +1,45 @@
+{
+  "_provenance": {
+    "delta_to": "e3_energy_params.json chain (db228ca -> 07019ea -> ae412e9)",
+    "issued_by": "energy-biophysical-economics seat, eb-memo-06, reply to d032"
+  },
+  "sigma_adjudication": "sigma >= 0.53 EMERGENT in 2021-24 is REJECTED on the evidence stack \u2014 the sigma-alone closure of DOE-36 is dead; the MIXTURE is confirmed (residual to f14 / f13 / quote-formation per m004's ranking)",
+  "sigma_sensitivity_band_update": {
+    "emergent_sigma_2024": [
+      0.3,
+      0.45
+    ],
+    "emergent_sigma_2021": [
+      0.15,
+      0.3
+    ],
+    "ramp": "monotone 2021->24 (industrial fastest-growing corroborates); shape linear-to-convex, engine's choice",
+    "supersedes": "d026's [0.10, 0.50] flat band",
+    "status": "ASSUMED-tier, better-informed; variant grids ONLY \u2014 renders stay gated on the purchase-spec primary"
+  },
+  "sigma_purchase_spec": {
+    "purpose": "a paid source becomes THE sigma primary iff ALL six hold; pre-committed symmetric acceptance \u2014 including sigma >= 0.53 if that is what it shows",
+    "spec": [
+      "1 UNIT basis (transformer counts) \u2014 or value basis WITH both segments' $/unit disclosed so conversion is internal",
+      "2 class boundary stated and mappable to >=100 MVA (accept >=60 MVA with the class caveat carried; reject unbounded 'power transformers')",
+      "3 US market: purchases for US installation, imports included",
+      "4 utility vs non-utility partition summable from segments; the IPP/generation-developer classification MUST be stated (largest taxonomy risk \u2014 some houses count IPPs inside 'power/utilities')",
+      "5 annual 2021-2024 actuals (2025 snapshot + back-cast accepted only as a band, stated; late-2024 vintage preferred \u2014 hits the Dec-24 calibration point)",
+      "6 methodology note: ORDERS preferred (sigma is an order share); shipments accepted with the delivery-lag caveat (~the response term's dead time); installed-base REJECTED"
+    ],
+    "acceptance": "meets 1-6 -> its band (stated uncertainty, else +-0.05) becomes the sigma primary, consumed emergent-matched; fails any -> joins the stack as corroboration only, purchase price notwithstanding",
+    "candidates": "Mordor single-user ~$4.75k (public 57.55% suggests item 4 satisfiable \u2014 confirm items 1/2/5/6 with vendor PRE-sale); WoodMac (contact sales); NEMA (member data, likely shipments basis -> item 6 caveat)"
+  },
+  "f13_admissibility": {
+    "dollar_conversion": "INADMISSIBLE as a unit-backlog estimator at current disclosure granularity",
+    "soldout_horizons": "ADMISSIBLE NOW, separately \u2014 the dated horizons are unit-free lead-time primaries needing no conversion: GEV 'largely sold out through end-2028, some lines quoting 2031' (~2025 statement) = 60-72 mo quotes on constrained lines, directly corroborating DOE-60-max and the quote-formation mechanism (a QUOTE, protective, on named lines); Hitachi 'committed through 2029' = >=48 mo. Recommend these enter the register as lead-time corroboration rows decoupled from the $-conversion",
+    "upgrade_path": "admissible-with-bands IF a segment-level disclosure lands: (transformer-only or grid-with-transformer-share $ backlog) x (US share stated/bounded) / (vintage-weighted $/unit band) -> order-of-magnitude corridor CHECK only, never a calibration input"
+  },
+  "_superseded_in_part": {
+    "what": "f13_admissibility.soldout_horizons",
+    "status": "WITHDRAWN IN FULL 2026-09-18",
+    "by": "e3_energy_params_delta_esr040.json (eb-d050, memo-39; origin esr-d040 / m043)",
+    "why": "the horizons were never read at any source by this seat; two of three have no admissible source, the third is a pooled three-product officer expectation. The old string is retained below ONLY as the historical record and because E3 line 217 asserts on it until csp moves the assert.",
+    "everything_else_in_this_file": "unchanged and unaffected"
+  }
+}

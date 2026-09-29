@@ -1,0 +1,195 @@
+{
+  "_provenance": {
+    "fitted_by": "energy-biophysical-economics seat, memo-03, reply to d021",
+    "primaries": [
+      "DOE LPT Resilience Report to Congress 2024 (md5 89c09245f41fac3e62582a6ff1487393)",
+      "DOE Large Power Transformers and the U.S. Electric Grid, April 2014 update"
+    ],
+    "class_boundary_flags": [
+      "production/base figures: LPT >=100 MVA",
+      "demand series: >60 MVA \u2014 growth rates transferable, LEVELS are not",
+      "750 (>60 MVA demand 2019) vs 754 (LPT-class supply 2019) is a numerical coincidence across classes \u2014 never conflate"
+    ]
+  },
+  "age_structure": {
+    "anchor_year": "2014 survey vintage",
+    "form": "gamma(years)",
+    "central": {
+      "k": 3.047,
+      "theta": 12.798,
+      "check_P_ge_25": 0.7,
+      "diag_P_ge_70": 0.0945
+    },
+    "corners": {
+      "mean38_q0.65": {
+        "k": 2.413,
+        "theta": 15.747,
+        "check_P_ge_25": 0.65,
+        "diag_P_ge_70": 0.1037
+      },
+      "mean38_q0.75": {
+        "k": 4.563,
+        "theta": 8.328,
+        "check_P_ge_25": 0.75,
+        "diag_P_ge_70": 0.0547
+      },
+      "mean40_q0.65": {
+        "k": 2.068,
+        "theta": 19.344,
+        "check_P_ge_25": 0.65,
+        "diag_P_ge_70": 0.1335
+      },
+      "mean40_q0.75": {
+        "k": 3.819,
+        "theta": 10.474,
+        "check_P_ge_25": 0.75,
+        "diag_P_ge_70": 0.0855
+      }
+    },
+    "upgrade": "EIA-860 vintage pull replaces this fit wholesale (N_a(0) direct) and enables cohort hazard"
+  },
+  "hazard": {
+    "form": "weibull replacement hazard",
+    "beta_band": [
+      2.5,
+      4.5
+    ],
+    "eta_band": [
+      55.0,
+      75.0
+    ],
+    "central": {
+      "beta": 3.5,
+      "eta": 65.0
+    },
+    "diagnostics": {
+      "central": {
+        "beta": 3.5,
+        "eta": 65.0,
+        "median_life_yr": 58.5,
+        "P_survive_40": 0.833,
+        "P_survive_70": 0.274,
+        "fleet_avg_hazard_pct_yr": 2.33,
+        "implied_replacements_per_yr_on_4900_6799": [
+          114,
+          159
+        ]
+      },
+      "lo": {
+        "beta": 2.5,
+        "eta": 75.0,
+        "median_life_yr": 64.8,
+        "P_survive_40": 0.812,
+        "P_survive_70": 0.431,
+        "fleet_avg_hazard_pct_yr": 1.36,
+        "implied_replacements_per_yr_on_4900_6799": [
+          66,
+          92
+        ]
+      },
+      "hi": {
+        "beta": 4.5,
+        "eta": 55.0,
+        "median_life_yr": 50.7,
+        "P_survive_40": 0.788,
+        "P_survive_70": 0.052,
+        "fleet_avg_hazard_pct_yr": 6.45,
+        "implied_replacements_per_yr_on_4900_6799": [
+          316,
+          439
+        ]
+      }
+    },
+    "boundary": "replacement hazard (failure + age-retirement), not catastrophic-failure-only; shock removals are the engine's separate pulse stream"
+  },
+  "demand": {
+    "level_anchor_LPT_class_2019_units": 754,
+    "level_anchor_boundary": ">=100 MVA, US-bound supply 2019 (137+617) used as demand proxy [stated approximation]",
+    "growth_rate_source_boundary": ">60 MVA class (DOE 750@2019 -> 900@2027)",
+    "g_central_per_yr": 0.0231,
+    "floor_band_g_per_yr": [
+      0.015,
+      0.03
+    ],
+    "coupled_boom": {
+      "g_per_yr_band": [
+        0.05,
+        0.1
+      ],
+      "window": "2024-2032 [ASSUMED]",
+      "order_intake_surge_multiplier_band": [
+        1.1,
+        1.4
+      ],
+      "surge_note": "the 70% y/y is ORDER INTAKE (incl. backlog-race and double-ordering), not underlying demand \u2014 modeled as a transient arrival multiplier, mean-reverting; NOT a demand growth rate"
+    },
+    "ltra_flag": "DOE spread suffices for floor+central at build-start; NERC LTRA pull REQUIRED before the phase diagram / coupled band renders"
+  },
+  "capacity": {
+    "domestic_nameplate_2019_units_yr": 343,
+    "domestic_actual_2019_units_yr": 137,
+    "utilization_2019": 0.4,
+    "util_consistency_check": 0.399,
+    "import_2019_units_yr": 617,
+    "import_baseline_growth_band_per_yr": [
+      0.0,
+      0.02
+    ],
+    "ramp_cap": {
+      "r_max_per_yr_band": [
+        0.15,
+        0.3
+      ],
+      "basis": "ESTIMATED \u2014 skill-formation physics: winding/assembly/test proficiency ~2-4 yr apprenticeship; sustainable mentor ratio ~1-2 trainees/master; primary evidence that personnel limit capacity: DOE 2014 ('availability of trained personnel set limits', line 1053)",
+      "applies_to": "utilization recovery toward nameplate AND staffing of new lines; DPA relaxes project DELAYS, not the skill cap"
+    },
+    "expansion_paths": {
+      "frozen": "nameplate 343 fixed; utilization free under ramp cap",
+      "announced": "Cox-notes expansions (Virginia Transformer, Hitachi, Siemens) \u2014 SECONDARY, capacity increments TO PRIMARY before coupled-band render; timing band announcement->first unit 30-48 mo, +12-24 mo to rated [ASSUMED]",
+      "dpa": "announced minus 12-18 mo on project delays [ASSUMED]; skill cap unchanged"
+    }
+  },
+  "build_time": {
+    "LPT": {
+      "form": "lognormal(months)",
+      "central": {
+        "mu": 2.1972,
+        "sigma": 0.3448,
+        "median_mo": 9.0,
+        "p90_mo": 14.0
+      },
+      "median_band_mo": [
+        7.0,
+        11.0
+      ],
+      "sigma_band": [
+        0.25,
+        0.45
+      ],
+      "anchor": "2010 slack-market 5-12 mo domestic / 6-16 foreign (DOE 2014 \u00a73.1.4)"
+    },
+    "distribution_class": {
+      "form": "lognormal(months) PLACEHOLDER",
+      "median_band_mo": [
+        1.0,
+        3.0
+      ],
+      "tag": "ASSUMED \u2014 the two DOE primaries are LPT-only (2024 report \u00a7: 'not distribution transformers'); needs its own primary before the distribution-class run (which is queued second per d020)"
+    }
+  },
+  "calibration": {
+    "DO_NOT_INPUT": true,
+    "target": "36 mo commonly quoted, 60 mo max (DOE 2024); pre-COVID <1 yr",
+    "corridor_backlog_units": {
+      "at_36mo": [
+        1462,
+        1912
+      ],
+      "at_60mo": [
+        2762,
+        3612
+      ],
+      "basis": "Q ~= (quoted lead - B_central) x throughput; C band 650-850/yr spans US-bound supply 2019 +-13%; ILLUSTRATIVE consistency corridor derived FROM the target \u2014 using it as an input would be circular, so it is a check, never a parameter"
+    }
+  }
+}
