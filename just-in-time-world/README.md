@@ -34,10 +34,70 @@ below are the ones published in the Floor section at the bottom of the study pag
 
 ## How to reproduce
 
-Each engine is a plain Python script with its seed fixed inside it. Run it from
-this folder (`pip install -r ../requirements.txt` first); it takes no arguments
-and rewrites its own outputs in place. Then run `python ../verify_rerun.py` to
-compare what you produced with what we published.
+Three engines. Run each from this folder; none takes arguments, and each
+rewrites its own outputs in place, so `git status` afterwards shows you what
+moved. The first two need only numpy; the sigma fit also needs pandas and
+openpyxl, and four public files described below.
+
+```
+pip install -r ../requirements.txt
+cd just-in-time-world
+python e3_transformer_queue_mc.py   # seed 33; about a minute
+python reserve_pool_mc.py           # seed 41; a few seconds
+python eb_d039_sigma_fit.py         # deterministic, no seed; needs the four files below
+python ../verify_rerun.py           # compares what you just produced with what we published
+```
+
+| Script | Reads | Rewrites |
+|---|---|---|
+| `e3_transformer_queue_mc.py` | the seven input files beside it: `e3_energy_params.json`, its five `e3_energy_params_delta_*.json`, and `eb_d039_sigma_fit_results.json` | `e3_results.json`, `e3_raw.npz`, `e3_sample.csv` |
+| `reserve_pool_mc.py` | nothing | `reserve_pool_results.json`, `raw_draws_sample.json` |
+| `eb_d039_sigma_fit.py` | `ferc1_acct353_additions.json`, `ppi_PCU3353113353111.json`, and four public files you fetch | `eb_d039_sigma_fit_results.json` |
+
+**The transformer-queue engine's seven inputs are checks, not sources.** Every
+value it uses is a constant inside the script. At start it compares those
+constants with the seven files and stops if one disagrees; if a file is
+missing, it stops and names all seven.
+
+**The sigma fit needs four files we do not redistribute.** They are public,
+large (about 74 MB together), and pinned by checksum rather than copied. The
+paper's Appendix B lists each one with its MD5 and source address:
+`eia860_2022.zip`, `eia860_2023.zip`, `eia860_2024.zip` (the EIA's Form 860
+annual files) and `lbnl_ix_queue_data_file_thru2024_v2.xlsx` (Berkeley Lab's
+interconnection-queue workbook). Put them in this folder, **unopened and under
+those names**. The EIA serves the zips as `eia8602022.zip` and so on, so
+rename them. The script reads the zips directly and, if anything is missing,
+names every file it could not find. Check each file's MD5 against Appendix B
+before running: a file the EIA has since revised will not give our numbers.
+The 2024 file sits at the EIA's current-year address and will move to its
+archive when the next year is released.
+
+**What we got when we re-ran the published files** (2026-09-29, a fresh clone
+of this repository, Windows 11, Python 3.14.5, numpy 2.5.1, pandas 3.0.5,
+openpyxl 3.1.5):
+
+- `e3_transformer_queue_mc.py` (46 s): `e3_raw.npz` and `e3_sample.csv`
+  byte-identical. In `e3_results.json` exactly one value differs:
+  `runtime_s`, the wall-clock time of the run (50.7 published, 45.8 here). It
+  will differ on every run, so `verify_rerun.py` always reports this one file
+  as DIFFERS by one number. Every modeled value in it is identical.
+- `reserve_pool_mc.py` (1.5 s): both outputs byte-identical.
+- `eb_d039_sigma_fit.py` (23 s), with the four files fetched and their MD5s
+  matching Appendix B: `eb_d039_sigma_fit_results.json` byte-identical.
+  Run without them, it stopped and named all seven missing sheet sources.
+
+The scripts' SHA-256 values in the paper's Appendix B (taken with line endings
+normalized to LF) match the files here.
+
+**The sigma fit is the one engine in this study that nobody but its author
+has reproduced.** Every other engine was reimplemented or probed during review
+by someone who did not write it. Our re-run above shows that the file on disk
+is what the script produces. It does not test the choices inside the script.
+
+The transformer-queue engine and its specification carry references to the
+study's internal review (dispatch and memo numbers such as `d045` or
+`memo-10`) in comments and in some input file names. They record where each
+constant came from, and they are left as the referees accepted them.
 
 If a number in the report and a number in these files disagree, the files win,
 and we want to know: https://thethirdattractor.org/corrections?study=just-in-time-world
