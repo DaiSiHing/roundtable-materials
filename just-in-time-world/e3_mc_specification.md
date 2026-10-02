@@ -33,16 +33,18 @@ folder, it reproduces `e3_raw.npz` and `e3_sample.csv` byte for byte, and
 `e3_results.json` byte for byte except `runtime_s`, which is wall-clock
 time.
 
-`eb_d039_sigma_fit_results.json` travels without the script that made
-it, on purpose. That fit is the energy seat's analysis. It runs on raw
-federal and laboratory data (EIA-860 generator files, FERC account
-additions, the LBNL interconnection-queue file and a producer price
-index), and this folder does not carry that data. Shipping the script
-without it would put a file here that cannot run, which is the failure
-this section exists to prevent. The engine uses the fit's results for
-one thing only: it checks, at start, that its own 2024 sigma band
-contains the fit's 2024 arrival central value, and that the band's top
-is at or above the top of the fit's 2022–24 delivered envelope. No number the engine produces comes from the fit.
+`eb_d039_sigma_fit_results.json` is written by `eb_d039_sigma_fit.py`,
+the energy seat's fit, an engine in its own right. It ships in the same
+folder with its two small inputs. Its four large public inputs are
+fetched by the reader, and how to run it is in the folder's README and
+the paper's Appendix B. **This engine does not need the fit to be run.**
+It reads only the fit's results file, and only to check, at start, that
+its own 2024 sigma band contains the fit's 2024 arrival central value,
+and that the band's top is at or above the top of the fit's 2022–24
+delivered envelope. No number this engine produces comes from the fit.
+*(Paragraph corrected 2026-10-01. The first version said the fit's script
+did not travel with this engine; the fit then graduated as its own engine
+and shipped in the same folder, so that sentence became false.)*
 
 ## History and supply (this round)
 

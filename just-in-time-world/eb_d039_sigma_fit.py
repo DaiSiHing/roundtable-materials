@@ -26,8 +26,9 @@ YEARS = [2022, 2023, 2024]
 # INPUTS: looked for BESIDE THIS SCRIPT FIRST, then in the study's pull folder
 # (d299; the rule csp-d097 set for E3). EIA-860 may be given either as the
 # extracted workbooks (eia860_extract/<year>/...) or as the zip EIA publishes
-# (eia860_<year>.zip); the two sheets are read straight out of the zip, so no
-# extraction step is needed. A missing input stops the run with a message
+# (eia860_<year>.zip, or eia860<year>.zip, the name EIA serves it under; d316);
+# the two sheets are read straight out of the zip, so no extraction step is
+# needed. A missing input stops the run with a message
 # naming EVERY missing file, not the first.
 # ---------------------------------------------------------------------------
 import io as _io, zipfile as _zip
@@ -52,23 +53,24 @@ def _eia(year, kind):
         f = os.path.join(d, "eia860_extract", str(year), member)
         if os.path.exists(f):
             return f
-        z = os.path.join(d, "eia860_%d.zip" % year)
-        if os.path.exists(z):
-            with _zip.ZipFile(z) as zf:
-                if member in zf.namelist():
-                    return _io.BytesIO(zf.read(member))
+        for zname in ("eia860_%d.zip" % year, "eia860%d.zip" % year):
+            z = os.path.join(d, zname)
+            if os.path.exists(z):
+                with _zip.ZipFile(z) as zf:
+                    if member in zf.namelist():
+                        return _io.BytesIO(zf.read(member))
     return None
 
 
 _missing = [n for n in _FLAT if _find(n) is None]
-_missing += ["eia860_%d.zip (or eia860_extract/%d/%s)" % (y, y, _EIA[k].format(y=y))
+_missing += ["eia860%d.zip (or eia860_extract/%d/%s)" % (y, y, _EIA[k].format(y=y))
              for y in YEARS for k in _EIA if _eia(y, k) is None]
 if _missing:
     raise SystemExit("eb_d039_sigma_fit: missing input(s); place each beside this "
-                     "script (or in author/sources/sigma_pull/):" + chr(10) + "  "
+                     "script:" + chr(10) + "  "
                      + (chr(10) + "  ").join(_missing)
-                     + chr(10) + "Sources and md5s: author/sources/sigma_pull/README.md "
-                       "(on the Floor: the manifest beside this script).")
+                     + chr(10) + "Sources and md5s: the paper's Appendix B (in the study's "
+                       "own tree: author/sources/sigma_pull/README.md).")
 
 # ---------------------------------------------------------------------------
 # frozen v2 slots (values asserted, not re-chosen)
