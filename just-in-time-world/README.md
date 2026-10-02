@@ -62,37 +62,40 @@ missing, it stops and names all seven.
 **The sigma fit needs four files we do not redistribute.** They are public,
 large (about 74 MB together), and pinned by checksum rather than copied. The
 paper's Appendix B lists each one with its MD5 and source address:
-`eia860_2022.zip`, `eia860_2023.zip`, `eia860_2024.zip` (the EIA's Form 860
-annual files) and `lbnl_ix_queue_data_file_thru2024_v2.xlsx` (Berkeley Lab's
-interconnection-queue workbook). Put them in this folder, **unopened and under
-those names**. The EIA serves the zips as `eia8602022.zip` and so on, so
-rename them. The script reads the zips directly and, if anything is missing,
-names every file it could not find. Check each file's MD5 against Appendix B
+`eia8602022.zip`, `eia8602023.zip`, `eia8602024.zip` (the EIA's Form 860
+annual files, under the names the EIA serves them) and
+`lbnl_ix_queue_data_file_thru2024_v2.xlsx` (Berkeley Lab's
+interconnection-queue workbook). Put them in this folder, **unopened, as
+downloaded**. The script reads the zips directly and, if anything is missing,
+names every file it could not find. (Until October 2, 2026 the script wanted
+the zips renamed `eia860_2022.zip` and so on; it now takes the EIA's names.) Check each file's MD5 against Appendix B
 before running: a file the EIA has since revised will not give our numbers.
 The 2024 file sits at the EIA's current-year address and will move to its
 archive when the next year is released.
 
-**What we got when we re-ran the published files** (2026-09-29, a fresh clone
+**What we got when we re-ran the published files** (2026-10-02, a fresh clone
 of this repository, Windows 11, Python 3.14.5, numpy 2.5.1, pandas 3.0.5,
-openpyxl 3.1.5):
+openpyxl 3.1.5; the same result as the first re-run on 2026-09-29):
 
-- `e3_transformer_queue_mc.py` (46 s): `e3_raw.npz` and `e3_sample.csv`
+- `e3_transformer_queue_mc.py` (54 s): `e3_raw.npz` and `e3_sample.csv`
   byte-identical. In `e3_results.json` exactly one value differs:
-  `runtime_s`, the wall-clock time of the run (50.7 published, 45.8 here). It
+  `runtime_s`, the wall-clock time of the run (50.7 published, 48.1 here). It
   will differ on every run, so `verify_rerun.py` always reports this one file
   as DIFFERS by one number. Every modeled value in it is identical.
 - `reserve_pool_mc.py` (1.5 s): both outputs byte-identical.
-- `eb_d039_sigma_fit.py` (23 s), with the four files fetched and their MD5s
-  matching Appendix B: `eb_d039_sigma_fit_results.json` byte-identical.
-  Run without them, it stopped and named all seven missing sheet sources.
+- `eb_d039_sigma_fit.py` (20 s), with the four files beside it under the
+  EIA's and LBNL's own names and their MD5s matching Appendix B:
+  `eb_d039_sigma_fit_results.json` byte-identical. Run without them, it
+  stopped and named every missing file.
 
 The scripts' SHA-256 values in the paper's Appendix B (taken with line endings
 normalized to LF) match the files here.
 
-**The sigma fit is the one engine in this study that nobody but its author
-has reproduced.** Every other engine was reimplemented or probed during review
-by someone who did not write it. Our re-run above shows that the file on disk
-is what the script produces. It does not test the choices inside the script.
+**The sigma fit's arithmetic has been recomputed by a second hand, its
+choices have not.** The paper's Appendix B says which: the Author rebuilt the
+fit from the same public inputs with an independent aggregation, and that
+tests the sums, not the decisions the script embodies. Our re-run above shows
+only that the file on disk is what the script produces.
 
 The transformer-queue engine and its specification carry references to the
 study's internal review (dispatch and memo numbers such as `d045` or
